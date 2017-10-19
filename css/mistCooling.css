@@ -1,0 +1,23 @@
+
+
+/*喷雾降温*/
+.content {
+	width: 1200px;
+	margin: 0 auto;
+}
+.bold {
+	font-weight: bold;
+}
+.bigfont {
+	font-size: 1.6rem;
+}
+.contentcolor {
+	background: rgb(249,249,249);
+}
+.content-back {
+	background: -webkit-linear-gradient(right,#ccc,rgb(75,167,55),#ccc);
+	background: linear-gradient();
+}
+.content-self p {
+	text-align: justify;
+}
