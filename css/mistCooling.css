@@ -14,10 +14,13 @@
 .contentcolor {
 	background: rgb(249,249,249);
 }
-.content-back {
+/*.content-back {
 	background: -webkit-linear-gradient(right,#ccc,rgb(75,167,55),#ccc);
 	background: linear-gradient();
-}
+}*/
 .content-self p {
 	text-align: justify;
+	padding: 0 1rem;
+	text-indent: 2em;
+	word-spacing: 10rem;
 }

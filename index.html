@@ -12,10 +12,19 @@
 
 	<body>
 		<div class="top clearfix">
-			<div class="col-lg-4 col-xs-12 paddr"><img src="img/logo.png" /></div>
-			<div class="col-lg-8 col-xs-12 padd">
+			<div class="col-xs-4 paddr"><img class="logo" src="img/logo.png" /></div>
+			<div class="col-xs-8 padd clearfix">
+				<div class="pull-right clearfix">
+					<p><span class="glyphicon glyphicon-phone-alt icon"></span><span class="fee">全国免费电话</span></p>
+					<p><a href="" class="tel">4008-215-663</a>
+					<a href="" class="tel">152-2119-1979</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="nav">
+			<div class="col-xs-12 padd">
 				<ul class="top-ul flex-wrapper paddl">
-					<li class="list">
+					<li class="list current">
 						<a href="index.html">首页</a>
 					</li>
 					<li class="list">
@@ -50,10 +59,10 @@
 				<div class="swiper-wrapper">
 					<div class="swiper-slide"><img src="img/flash.jpg" /></div>
 					<div class="swiper-slide"><img src="img/flash2.jpg" /></div>
-					<div class="swiper-slide"><img src="img/flash3.jpg" /></div>
+					<!--<div class="swiper-slide"><img src="img/flash3.jpg" /></div>-->
 				</div>
 				<div class="swiper-button-prev"></div>
-    			<div class="swiper-button-next"></div>
+				<div class="swiper-button-next"></div>
 				<div class="swiper-pagination"></div>
 			</div>
 		</div>
@@ -69,20 +78,37 @@
 				<p>上海雾盛实业有限公司 作为国内环境空间优化解决方案的生产商及供货商，业务遍布全国22个省市，自治区，直辖市，始终以观念国际化、设计专业化、技术熟练化、产品高质化、施工完美化、价格合理化、售后服务化、终生保固化、用户最大满意化为宗旨，为您提供最优质的服务，真诚地期待与您的互动合作，共创自然之境。</p>
 			</div>
 		</div>
+	<div class="last">
 		<div class="foot">
-			
+			<div class="col-lg-6 col-md-12 footcolor">
+				<h3>关于我们</h3>
+				<p class="col-xs-6"><a href="">公司介绍</a></p>
+				<p class="col-xs-6">企业文化</p>
+				<p class="col-xs-6">企业荣誉</p>
+				<p class="col-xs-6">联系我们</p>
+			</div>
+			<div class="col-lg-6 col-md-12 footcolor">
+				<h3>新闻中心</h3>
+				<p class="col-xs-6">公司新闻</p>
+				<p class="col-xs-6">新闻动态</p>
+				<p class="col-xs-6">视频中心</p>
+				<p class="col-xs-6">常见问题</p>
+			</div>
+			<p class="footp">Copyright © <b>上海雾盛实业有限公司</b></p>
 		</div>
-
+	</div>
 		<script src="lib/jquery/2.2.4/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="lib/swiper/3.4.2/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(function() {
+				$(".list .current").length;
+//				console.log($(".list .current").length);
 				var mySwiper = new Swiper('.swiper-container', {
 					autoplay: 3000,
-					pagination : '.swiper-pagination',
+					pagination: '.swiper-pagination',
 					speed: 300,
-					prevButton:'.swiper-button-prev',
-					nextButton:'.swiper-button-next',
+					prevButton: '.swiper-button-prev',
+					nextButton: '.swiper-button-next',
 				})
 			});
 		</script>

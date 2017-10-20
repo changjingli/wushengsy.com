@@ -1,21 +1,23 @@
 
 
-.top, .flash, .content, .foot {
-	width: 1200px;
-	margin: 0.5rem auto;
-	overflow: hidden;
-}
 .content-self h2 {
 	text-align: center;
-	color: white;
 }
 .content-self p {
+	padding: 1rem;
 	text-indent: 2em;
 	text-align: justify;
 }
 .content-self h5 {
 	font-weight: bold;
+	padding: 0 0.5rem;
 }
-
-
-
+.content-self {
+	padding-bottom: 2.5rem;
+}
+.footcolor {
+	text-align: center;
+}
+.footcolor a, .footcolor {
+	color: white;
+}

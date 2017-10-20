@@ -1,6 +1,22 @@
 
+body {
+	font-size: 1.6rem;
+	background: #f0f0f0;
+	/*background: -webkit-linear-gradient(rgb(252,179,20),rgb(75,167,55));
+	background: -moz-linear-gradient(rgb(252,179,20),rgb(75,167,55));*/
+}
 html {
 	font-size: 62.5%;
+}
+.top, .flash, .content, .foot, .nav {
+	/*padding:0 1rem;*/
+	background: white;
+	max-width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.logo {
+	padding-top: 1rem;
 }
 .paddl {
 	padding-left: 0;
@@ -20,9 +36,46 @@ html {
 	list-style: none;
 	flex: 1;
 	line-height: 5rem;
+	display: inline-block;
+	cursor: pointer;
 	text-align: center;
-	background: rgb(75,167,55);
+	background: rgb(252,179,20);
+	border-top: 0.4rem solid transparent;
 }
 .list a {
 	color: white;
+}
+.top-ul {
+	margin-top: 0.5rem;
+}
+.foot {
+	background: rgb(75,167,55);
+	margin-bottom: 0;
+}
+
+.footp {
+	text-align: center;
+	color: white;
+	font-size: 1.4rem;
+}
+.icon {
+	font-size: 3rem;
+	padding-right: 1rem;
+	color: rgb(75,167,55);
+	padding-top: 1rem;
+}
+.fee {
+	color: black;
+	font-weight: bold;
+}
+.tel {
+	color: black;
+}
+.current, .list:hover, .list a:hover {
+	border-top-color: rgb(75,167,55);
+	color: rgb(75,167,55);
+	transition: .5s;
+}
+.list .current {
+	color: rgb(75,167,55);
 }
