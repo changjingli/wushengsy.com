@@ -21,3 +21,12 @@
 .footcolor a, .footcolor {
 	color: white;
 }
+.content_more {
+	padding-right:1rem;
+	color: rgb(75,165,55);
+	font-size: 1.5rem;
+}
+.content_more:hover {
+	cursor: pointer;
+	color: orange;
+}
