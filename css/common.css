@@ -52,6 +52,9 @@ html {
 	background: rgb(75,167,55);
 	margin-bottom: 0;
 }
+.last {
+	margin-top: 2rem;
+}
 
 .footp {
 	text-align: center;
