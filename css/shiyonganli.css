@@ -1,0 +1,82 @@
+
+
+.conter-border {
+	border: 0.1rem solid #CCCCCC;
+}
+.shiyong-item {
+	line-height: 4rem;
+	border-bottom: .5px solid #ccc;
+	text-align: center;
+}
+ul li {
+	list-style: none;
+}
+.shiyong-item a {
+	display: block;
+	text-decoration: none;
+	color: #333333;
+}
+.shiyong-item a:hover, .shiyong-curr a {
+	color: white;
+	background: rgb(32,151,59);
+}
+.shiyong-p {
+	padding-top: 1rem;
+	text-align: center;
+	cursor: pointer;
+}
+.shiyong-p:hover {
+	color: orange;
+}
+.shiyong-h2 {
+	color: white;
+	text-align: center;
+}
+.shiyong-p1, .shiyong-p2 {
+	text-indent: 2em;
+	text-align: justify;
+}
+.shiyong-p1 {
+	padding: 0.5rem;
+}
+.shiyong-p2 {
+	padding-bottom: 1rem;
+	color: white;
+}
+.shiyong-mar {
+	margin-right: -0.1rem;
+}
+.shiyong-ul {
+	padding-left: 0;
+}
+.paddl {
+	padding-left: 0;
+}
+.paddr {
+	padding-right: 0;
+}
+.padd {
+	padding-left: 0;
+	padding-right: 0;
+}
+.bg {
+	background: rgb(32,151,59);
+}
+.shiyong-top {
+	/*margin-bottom: 4rem;*/
+}
+
+@media only screen and (max-width: 768px) {
+	.shiyong-item {
+		display: inline-block;
+		border: 0;
+	}
+	
+	.shiyong-item a {
+		padding: 0 1rem;
+	}
+	
+	.example-list {
+		width: 50%;
+	}
+}
