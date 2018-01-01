@@ -1,0 +1,57 @@
+[
+	{
+		"id":0,
+		"title": "恒源矿产",
+		"imagesPath": "images/partner/hengyuankuangchan.png"
+	},
+	{
+		"id":1,
+		"title": "顺泰合金",
+		"imagesPath": "images/partner/shuntaihejin.png"
+	},
+	{
+		"id":2,
+		"title": "陕西三泰能源",
+		"imagesPath": "images/partner/shanxisantainengyuan.png"
+	},
+	{
+		"id":3,
+		"title": "群盛培植",
+		"imagesPath": "images/partner/qunshengpeizhi.png"
+	},
+	{
+		"id":4,
+		"title": "捷星物流",
+		"imagesPath": "images/partner/jiexingwuliu.png"
+	},
+	{
+		"id":5,
+		"title": "南海环保",
+		"imagesPath": "images/partner/nanhaihuanbao.png"
+	},
+	{
+		"id":6,
+		"title": "聚来友餐饮",
+		"imagesPath": "images/partner/julaiyoucanyin.png"
+	},
+	{
+		"id":7,
+		"title": "顺德纸业",
+		"imagesPath": "images/partner/shundezhiye.png"
+	},
+	{
+		"id":8,
+		"title": "凯发房产",
+		"imagesPath": "images/partner/kaifafangchan.png"
+	},
+	{
+		"id":9,
+		"title": "任量起重",
+		"imagesPath": "images/partner/renliangqizhong.png"
+	},
+	{
+		"id":10,
+		"title": "海泰铝锭",
+		"imagesPath": "images/partner/haitailvding.png"
+	}
+]

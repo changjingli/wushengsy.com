@@ -1,0 +1,39 @@
+[
+	{
+		"id":0,
+		"title": "垃圾回收加工区喷雾除臭降低细菌",
+		"imagesPath": "images/5penwuchuchou/penwuchuchou1.jpg"
+	},{
+		"id":1,
+		"title":"废油提炼厂喷雾除臭",
+		"imagesPath":"images/5penwuchuchou/penwuchuchou2.jpg"
+	},{
+		"id":2,
+		"title":"废料回收工厂喷雾除臭",
+		"imagesPath":"images/5penwuchuchou/penwuchuchou3.jpg"
+	},{
+		"id":3,
+		"title":"养鸡场喷雾降温除臭",
+		"imagesPath":"images/5penwuchuchou/penwuchuchou4.png"
+	},{
+		"id":4,
+		"title":"养猪场喷雾降温除臭",
+		"imagesPath":"images/5penwuchuchou/penwuchuchou5.jpg"
+	},{
+		"id":5,
+		"title":"养殖场喷雾除臭案例",
+		"imagesPath":"images/5penwuchuchou/penwuchuchou6.jpg"
+	},{
+		"id":6,
+		"title":"垃圾中转站 消毒除菌",
+		"imagesPath":"images/5penwuchuchou/penwuchuchou7.jpg"
+	},{
+		"id":7,
+		"title":"养鸡厂喷雾除臭",
+		"imagesPath":"images/5penwuchuchou/penwuchuchou8.jpg"
+	},{
+		"id":8,
+		"title":"污水处理站喷雾除臭",
+		"imagesPath":"images/5penwuchuchou/penwuchuchou9.jpg"
+	}
+]

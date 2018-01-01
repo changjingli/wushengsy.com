@@ -1,0 +1,302 @@
+body {
+	user-select: none;
+}
+
+.logo {
+	padding-top: 37px;
+}
+
+.swiper-wrapper img {
+	width: 100%;
+	height: 450px;
+}
+
+.sucess {
+	width: 100%;
+}
+
+.foots {
+	width: 1000px;
+}
+
+.foots-item {
+	text-align: center;
+}
+
+.foots-item dd {
+	font-size: .9rem;
+	margin-top: .9rem;
+}
+
+.foots-item dd:first-of-type {
+	font-weight: normal;
+}
+
+.foots-item-icon {
+	width: 53px;
+    height: 37px;
+}
+
+.wid33 {
+	float: left;
+	width: 33.3%;
+}
+
+.wid25 {
+	float: left;
+	width: 25%;
+}
+
+.clearfix:after {
+	content: "";
+	height: 0;
+	line-height: 0;
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.foots {
+	padding-top: 60px;
+	/*padding-left: 50px;*/
+	font-weight: bold;
+}
+
+.foots p {
+	padding: 5px;
+}
+
+.penwuhei {
+	box-sizing: border-box;
+	height: 145px;
+	width: 33.3%;
+	padding: 5px;
+}
+.penwuhei:hover {
+	transform: translate(1.5);
+}
+[v-cloak] {
+	display: none !important;
+}
+.penwucol {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.penwucol:hover {
+	color: #ec611e;
+}
+.bw {
+	margin-top: 5px;
+}
+.page li {
+	float: left;
+	width: 20px;
+	line-height: 20px;
+	border: 1px solid #ccc;
+}
+#page-number {
+	margin: 15px 0;
+	width: initial;
+	padding-left: 250px;
+	text-align: center;
+}
+#page-number li {
+	height: auto;
+	width: 35px;
+}
+.currback {
+	background: rgb(236,97,30);
+}
+#page-number button:first-of-type {
+
+}
+#page-number button {
+	width: 30px;
+	padding: 10px;
+	border-radius: 5px;
+	border: 0;
+	font-weight: bold;
+}
+.aboutp {
+	font-size: 16px;
+	font-weight: bold;
+	padding-top: 30px;
+}
+.aboutimg{
+	text-align: center;
+}
+.ban2 {
+	height: 600px;
+	text-align: center;
+}
+.aboutour {
+	margin-top: 20px;
+	background: url(../images/pk_tx.png) no-repeat 50%;
+	height: 92px;
+}
+.phone {
+	padding-top: 15px;
+	width: 1000px;
+	height: 350px;
+	margin: 0 auto;
+	text-align: left;
+	background: url(../images/system/kuhurexian.jpg) no-repeat top right;
+	background-size: 400px 350px;
+}
+.phone p {
+	font-size: 16px;
+	line-height: 40px;
+}
+.question, .newsli {
+	box-sizing: border-box;
+	padding: 10px;
+	width: 77%;
+	float: right;
+}
+.questionfoo {
+	padding: 15px;
+	font-size: 16px;
+	text-align: justify;
+	display: none;
+}
+.questiontitle {
+	margin:10px 0;
+	text-align: center;
+	color: white;
+	line-height: 50px;
+	background: rgb(236,97,30);
+	cursor: pointer;
+}
+.unfold, .newstime {
+	float: right;
+}
+.newstime {
+	padding-right: 150px;
+	font-size: 14px;
+}
+.unfold {
+	padding-right: 20px;
+	font-size: 30px;
+}
+.newsh {
+	line-height: 50px;
+}
+.newsp {
+	padding-top: 10px;
+	border-top: 1px solid #CCCCCC;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.numberbg {
+	cursor: pointer;
+	outline: none;
+}
+.numberbg:hover {
+	background: rgb(236,97,30);
+}
+.addnumberbg {
+	background: rgb(236,97,30);
+	color: white;
+}
+.cpmpanyp {
+	padding-top: 20px;
+	text-align: justify;
+	text-indent: 2em;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+.mar {
+	margin-bottom: 20px;
+}
+.comph {
+	padding: 10px 0;
+}
+.companyContant{
+	width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+}
+.itemli {
+	float: left;
+	width: 32.6%;
+	box-sizing: border-box;
+	padding: 10px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+.goinimg {
+	width: 100%;
+	height: 200px;
+}
+.gointxt h3 {
+	color: rgb(236,97,30);
+	padding: 10px 0;
+}
+.gointxt p {
+	font-size: 14px;
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+.companyimg {
+	margin: 24px 10px 10px 0;
+	float: left;
+	width: 300px;
+	height: 200px;
+	overflow: hidden;
+}
+.companyimg img {
+	width: 100%;
+	/* float: left; */
+}
+.goinbtn {
+	line-height: 30px;
+	padding: 0 20px;
+	background: rgb(236,97,30);
+	border: 0;
+	color: white;
+	font-weight: bold;
+	margin-top: 10px;
+}
+.unfoldfoo {
+	display: none;
+}
+.swiper-pagination-bullet {
+	width: 40px;
+	border-radius: 8px;
+}
+
+.swiper-pagination-bullet-active {
+	background: #ec611e;
+}
+
+/* xiangqing.html */
+.detail-title {
+	font-size: 1.6rem;
+	text-align: center;
+	line-height: 1.7;
+}
+.float {
+	float: left;
+}
+/*news_foo*/
+.new_foo>dt {
+	font-size: 18px;
+	font-weight:bold;
+	padding-bottom: 10px;
+}
+.new_foo>dd {
+	font-size: 16px;
+	padding: 5px;
+	text-indent: 2em;
+}
+.questiondd {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

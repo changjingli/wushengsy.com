@@ -1,0 +1,32 @@
+[
+	{
+		"id":0,
+		"title":"办公区",
+		"imagesPath":"sucai/photoAblum/photoAblum1.jpg"
+	},
+	{
+		"id":1,
+		"title":"办公区",
+		"imagesPath":"sucai/photoAblum/photoAblum2.jpg"
+	},
+	{
+		"id":2,
+		"title":"公司展厅",
+		"imagesPath":"sucai/photoAblum/photoAblum3.jpg"
+	},
+	{
+		"id":3,
+		"title":"生产车间",
+		"imagesPath":"sucai/photoAblum/photoAblum4.jpg"
+	},
+	{
+		"id":4,
+		"title":"生产车间",
+		"imagesPath":"sucai/photoAblum/photoAblum5.jpg"
+	},
+	{
+		"id":5,
+		"title":"主机上线调试",
+		"imagesPath":"sucai/photoAblum/photoAblum6.jpg"
+	}
+]
