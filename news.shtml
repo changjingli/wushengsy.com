@@ -15,61 +15,8 @@
 	</head>
 
 	<body>
-		<div class="h_top">
-			<div class="header">
-				<!--顶部内容-->
-				<p>
-					<span>
-						<a href="javascript:;" title="在线留言" target="_blank">在线留言</a>|
-						<a href="javascript:;" title="联系雾盛" target="_blank">联系雾盛</a>|
-						<a href="javascript:;" onclick="javascript:addBookmark(this)" title="收藏本站">收藏本站</a>|
-						<a href="javascript:;" title="网站地图" target="_blank">网站地图</a>
-			    	</span> 您好，欢迎访问上海雾盛实业有限公司！
-				</p>
-				<!--logo联系方式-->
-				<div class="h_logo">
-					<img class="logo" src="images/system/logo.png" alt="上海雾盛有限公司" />
-					<h3>4008 215 663<span>152 2119 1979</span></h3>
-				</div>
-				<!--导航栏-->
-				<div class="h_nav">
-					<ul class="h_ul">
-						<li class="cur"><i></i>
-							<a href="index.html" title="首页">首页</a>
-						</li>
-						<li><i></i>
-							<a href="penwujiangwen.html" title="喷雾降温">喷雾降温</a>
-						</li>
-						<li><i></i>
-							<a href="penwuchuchen.html" title="喷雾除尘">喷雾除尘</a>
-						</li>
-						<li><i></i>
-							<a href="jingguanzaowu.html" title="景观造雾">景观造雾</a>
-						</li>
-						<li><i></i>
-							<a href="penwujiasi.html" title="喷雾加湿">喷雾加湿</a>
-						</li>
-						<li><i></i>
-							<a href="penwuchuchou.html" title="喷雾除臭">喷雾除臭</a>
-						</li>
-						<li><i></i>
-							<a href="wushengzhuji.html" title="雾盛主机">雾盛主机</a>
-						</li>
-						<li><i></i>
-							<a href="wushengguanjian.html" title="喷头和管件">喷头和管件</a>
-						</li>
-						<li><i></i>
-							<a href="aboutour.html" title="联系我们">联系我们</a>
-						</li>
-					</ul>
-				</div>
-				
-			</div>
-		</div>
-
-		<script type="text/javascript">
-			var MARK = "index";
-		</script>
+		<!-- #include file="header.html" -->
+		
 		<div class="ban1 bw">
 			<div class="content">
 				<p><span>量身定做--<b>雾盛解决方案</b></span>
@@ -108,10 +55,10 @@
 					<h4 sid='0001,0010'><a href="javascript:;" title="新闻资讯">新闻资讯</a></h4>
 					<ul>
 						<li sid='0001,0010,0005'>
-							<a href="dynamic.html" title="雾盛动态">雾盛动态</a>
+							<a href="dynamic.shtml" title="雾盛动态">雾盛动态</a>
 						</li>
 						<li sid='0001,0010,0007'>
-							<a href="news.html" title="行业新闻">行业新闻</a>
+							<a href="news.shtml" title="行业新闻">行业新闻</a>
 						</li>
 						<li sid='0001,0010,0008'>
 							<a href="video.html" title="视频中心">视频中心</a>
@@ -125,7 +72,6 @@
 					<ul>
 						<li class="newfl" v-for="foo in newfoos" v-cloak>
 							<h3 class="newsh">{{foo.title}}<span class="newstime">{{foo.time}}</span></h3>
-							<p class="newsp">{{foo.desc}}</p>
 						</li>
 					</ul>
 					<ul id="page-number">
@@ -134,47 +80,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="f_foot">
-			<div class="footer">
-				<div class="foots clearfix">
-					<dl class="wid25 foots-item">
-						<dt><img class="foots-item-icon" src="images/system/icon-tel.png"/></dt>
-						<dd>客服热线</dd>
-						<dd>4008-215-663</dd>
-					</dl>
-					
-					<dl class="wid25 foots-item">
-						<dt><img class="foots-item-icon" src="images/system/icon-fax.png"/></dt>
-						<dd>传真</dd>
-						<dd>021-5430-1293</dd>
-					</dl>
-					
-					<dl class="wid25 foots-item">
-						<dt><img class="foots-item-icon" src="images/system/icon-email.png"/></dt>
-						<dd>邮箱</dd>
-						<dd>3443628790@qq.com</dd>
-					</dl>
-					
-					<dl class="wid25 foots-item">
-						<dt><img class="foots-item-icon" src="images/system/icon-address.png"/></dt>
-						<dd>地址</dd>
-						<dd>上海市奉贤区金汇镇金碧路585号</dd>
-					</dl>
-				</div>
-				<dl class="foots-item" style="margin-top: 20px;">
-					<dd>©版权所有 上海雾盛实业有限公司</dd>
-					<dd>沪ICP备17010727号-2</dd>
-				</dl>
-
-			</div>
-		</div>
+		
+		<!-- #include file="footer.html" -->
+		
 		<!-- 返回顶部 -->
 		<script src="lib/jquery/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="js/nsw_index.js"></script>
 		<script src="js/rollup.min.js" type="text/javascript"></script>
-		<!--[if IE 6]>
-		<script src="js/dd_belatedpng.js" ></script>
-		<![endif]-->
 		<!-- Baidu Button BEGIN 百度分享开始 -->
 		<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=2&amp;pos=left&amp;uid=774763"></script>
 		<script type="text/javascript" id="bdshell_js"></script>
@@ -184,43 +96,42 @@
 		<script src="lib/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(function() {
-				$.getJSON("data/industryNews.json",function (_data) {
+				$.Post("apis/news/getIndustryNewsList.php", "", function(_data) {
 					var $app = new Vue({
-					el:'#penwu',
-					data:{
-						foos:_data,
-						size:6,
-						currentPage:1
-					},
-					computed:{
-						newfoos:function () {
-							var start = (this.currentPage - 1) * this.currentPage;
-							var end = this.currentPage * this.size;
-							return this.foos.slice(start,end)
+						el: '#penwu',
+						data: {
+							foos: _data,
+							size: 6,
+							currentPage: 1
 						},
-						newnumber:function () {
-							var total = Math.ceil( this.foos.length/this.size );
-							var arr = [];
-							for (var i=0; i<total; i++) {
-								arr.push(i)
+						computed: {
+							newfoos: function() {
+								var start = (this.currentPage - 1) * this.currentPage;
+								var end = this.currentPage * this.size;
+								return this.foos.slice(start, end)
+							},
+							newnumber: function() {
+								var total = Math.ceil(this.foos.length / this.size);
+								var arr = [];
+								for(var i = 0; i < total; i++) {
+									arr.push(i)
+								}
+								return arr;
 							}
-							return arr
+						},
+						methods: {
+							change: function(num) {
+								this.currentPage = num + 1;
+							}
 						}
-					},
-					methods:{
-						change:function (num) {
-							this.currentPage = num + 1;
-						}
-					}
-					
-					})
-					
+					});
+			
 					$(".numberbg:first").addClass("addnumberbg");
-						$(".numberbg").on('click',function () {
-							$(this).addClass('addnumberbg').parent().siblings().find('.numberbg').removeClass('addnumberbg')
-						})
-				})
-			})
+					$(".numberbg").on('click', function() {
+						$(this).addClass('addnumberbg').parent().siblings().find('.numberbg').removeClass('addnumberbg')
+					});
+				});
+			});
 		</script>
 
 	</body>
