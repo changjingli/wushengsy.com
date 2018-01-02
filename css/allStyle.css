@@ -300,3 +300,23 @@ body {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
+
+/* ============ @group 新闻信息  ================= */
+
+.newsinfo dt, .newsinfo dd {
+	display: inline-block;
+	font-size: 14px;
+}
+
+.newsinfo dt {
+	font-weight: bold;
+}
+
+.newsinfo dd {
+	margin-right: 10px;
+}
+
+.newscontent {
+	margin-top: 20px;
+	font-size: 14px;
+}
