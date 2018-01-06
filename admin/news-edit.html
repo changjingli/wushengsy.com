@@ -49,8 +49,8 @@
 		<script src="../js/nsw_index.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../lib/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="../lib/layer/layer.js" ></script>></script>
-		<script src="ueditor/utf8-php/ueditor.config.js" type="text/javascript" charset="utf-8"></script>
-		<script src="ueditor/utf8-php/ueditor.all.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/ueditor/utf8-php/ueditor.config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/ueditor/utf8-php/ueditor.all.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$.Post("apis/news/getNewsDetail.php", {
 				id: getPageVar("id")
@@ -64,10 +64,11 @@
 					methods: {
 						submitNews: function () {
 							$.Post("apis/news/editNewsById.php", {
+								"id": getPageVar("id"),
 								"title": $("#title").val(),
 								"author": $("#author").val(),
 								"view": parseInt( $("#view").val() ),
-								"content": ue.getContext()
+								"content": ue.getContent()
 							}, function ( d ) {
 								layer.msg( d.desc );
 							});
