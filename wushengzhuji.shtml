@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 
-	<head id="Head1">
+	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>喷雾降温 - 上海雾盛实业有限公司</title>
+		<title>雾盛主机 - 上海雾盛实业有限公司</title>
 		<meta name="copyright" content="上海雾盛实业有限公司" />
 		<meta name="keywords" content="上海雾盛实业有限公司, 喷雾降温, 景观造雾, 喷雾加湿, 喷雾除尘, 喷雾除臭, 雾盛主机" />
 		<meta name="description" content="上海雾盛实业有限公司是一家集喷雾，喷泉，净化水设备等环保产品研发、设计、生产、安装、调试及培训为一体的大型综合性公司，公司长期专致改善室外环境，独特高效的降温节能设计。系列工程有：人造雾工程，冷雾降温工程，景观造雾工程，加湿除除尘工程，喷雾生物除臭工程，化学除臭工程，中水回用工程，污水处理工程，泳池净化工程，自动加湿工程，园林喷溉工程，人工降雨工程，森林雨雾工程，水帘降温工程，水冷降温工程，大棚湿润工程,滴灌及微喷灌工程。其中公司现代农业工程,依托公司降温程控技术,物联网技术,工业智能系统技术竭诚为传统行业提供节能化、信息化、智能化的产品与解决方法.公司拥有一流的技术和服务团队,秉承”科技兴企”的宗旨，以真诚．专业．创新．高效的服务投身于中国的节能事业，先进的生产理念．科学的质量管理，卓越的技术创新．完善的售后服务，使企业取得了良好的社会信誉和成绩．公司坚持”客户第一，诚信做人”的原则，可根据客户的需求进行定制．对系统的每个部件进行深入开发．以满足不同场合．不同环境的使用要求．达到好的使用效果．公司以低碳经济和绿色地球为目标，用高品质的产品和技术精良的服务团队，给国内各行各业顾客带来实在的回报，用自身的微薄之力在人类和生活环境改善付出行动，在未来的发展中，我们离不开你的大力支持，我们愿与你携手同行，与时俱进，同创人类自然和生活的美好环境．" />
@@ -12,9 +12,8 @@
 		<link href="css/resetcommonindex.css" rel="stylesheet" type="text/css" />
 	</head>
 
-	<body class="penwujiangwen">
+	<body class="wushengzhuji">
 		<!-- #include file="header.html" -->
-
 		<!-- #include file="lijizixun.html" -->
 		
 		<!--应用实例-->
@@ -27,7 +26,7 @@
 					<!--热卖产品-->
 					<ul>
 						<li class="itemli" v-for="itemli in newitemlis" v-cloak>
-							<a :href="'xiangqing.shtml?type=penwujiangwen&id=' + itemli.id" :title="itemli.title" target="_blank">
+							<a :href="'xiangqing.shtml?type=wushengzhuji&id='+itemli.id" target="_blank">
 								<img class="penwuhei" :src="itemli.imagesPath" :alt="itemli.title"/>
 								<p class="penwucol">{{itemli.title}}</p>
 							</a>
@@ -39,15 +38,14 @@
 				</div>
 			</div>
 		</div>
-		
 		<!-- #include file="footer.html" -->
-		
+		<!-- 返回顶部 -->
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 		<script type="text/javascript" src="js/nsw_index.js"></script>
 		<script src="lib/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(function() {
-				$.getJSON("data/penwujiangwen.json",function (_data) {
+				$.getJSON("data/wushengzhuji.json",function (_data) {
 					var $app = new Vue({
 						el:'#penwu',
 						data:{
@@ -75,7 +73,7 @@
 								this.currentPage = num + 1;
 							}
 						}
-					});
+					})
 					$(".numberbg:first").addClass("addnumberbg");
 					$(".numberbg").on('click',function () {
 						$(this).addClass('addnumberbg').parent().siblings().find('.numberbg').removeClass('addnumberbg')

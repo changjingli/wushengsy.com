@@ -16,7 +16,7 @@
 		<link rel="preload" as="image" href="images/h_bj.jpg" />
 	</head>
 
-	<body>
+	<body class="index">
 		<!-- #include file="header.html" -->
 		
 		<!--轮播图-->
@@ -33,45 +33,16 @@
 		<div class="pro">
 			<div class="content">
 				<!--左侧菜单栏-->
-				<div class="pro_l">
-					<h3><a href="javascript:;" title="应用实例"><span>雾盛<i>应用实例</i></span>Product Center</a></h3>
-					<h4 sid='0001,0004'><a href="javascript:;" title="产品分类">应用实例</a></h4>
-					<ul>
-						<li sid='0001,0004,0026'>
-							<a href="penwujiangwen.html" title="喷雾降温">喷雾降温</a>
-						</li>
-						<li sid='0001,0004,0027'>
-							<a href="penwuchuchen.html" title="喷雾除尘">喷雾除尘</a>
-						</li>
-						<li sid='0001,0004,0028'>
-							<a href="jingguanzaowu.html" title="景观造雾">景观造雾</a>
-						</li>
-						<li sid='0001,0004,0041'>
-							<a href="penwujiasi.html" title="喷雾加湿">喷雾加湿</a>
-						</li>
-						<li sid='0001,0004,0042'>
-							<a href="penwuchuchou.html" title="喷雾除臭">喷雾除臭</a>
-						</li>
-					</ul>
-					<h4 sid='0001,0010'><a href="javascript:;" title="产品展示">产品展示</a></h4>
-					<ul>
-						<li sid='0001,0010,0005'>
-							<a href="wushengguanjian.html" title="喷头和管件">喷头和管件</a>
-						</li>
-						<li sid='0001,0010,0006'>
-							<a href="wushengzhuji.html" title="雾盛主机">雾盛主机</a>
-						</li>
-					</ul>
-				</div>
+				<!-- #include file="left-pro.html" -->
 				<div class="pro_r">
 					<h3 id="uls">
-      					<span><a href="penwujiangwen.html" title="更多">+ 更多</a></span>
+      					<span><a href="penwujiangwen.shtml" title="更多">+ 更多</a></span>
       					<i><a href="javascript:;" title="应用实例">应用实例</a></i>
       				</h3>
 					<!--热卖产品-->
 					<ul id="penwu">
 						<li class="itemli" v-for="itemli in newitemlis" v-cloak>
-							<a :href="'xiangqing.html?type=penwujiangwen&id=' + itemli.id" :title="itemli.title" target="_blank">
+							<a :href="'xiangqing.shtml?type=penwujiangwen&id=' + itemli.id" :title="itemli.title" target="_blank">
 								<img class="penwuhei" :src="itemli.imagesPath" :alt="itemli.title" />
 								<p class="penwucol">{{itemli.title}}</p>
 							</a>
@@ -84,7 +55,7 @@
 		<div class="ban1">
 			<div class="content">
 				<p><span>量身定做--<b>雾盛解决方案</b></span>
-					<a href="javascript:;" target="_blank" title="立即咨询">立即咨询</a>
+					<a href="tel:15221191979" target="_blank" title="立即咨询">立即咨询</a>
 				</p>
 				<h3><span>雾盛免费服务电话</span><i>4008-215-663</i>152-2119-1979</h3>
 			</div>
@@ -103,11 +74,11 @@
 				<div class="sm">
 					<dl class="pk_d1">
 						<dd><span>◆喷雾降温<br />◆公园喷雾降温</span></dd>
-						<dt><a href="penwujiangwen.html" target="_blank"><img src="images/1penwujiangwen/pengwujiangwen3.jpg" alt="" /></a></dt>
+						<dt><a href="penwujiangwen.shtml" target="_blank"><img src="images/1penwujiangwen/pengwujiangwen3.jpg" alt="" /></a></dt>
 					</dl>
 					<em></em>
 					<dl class="pk_d2">
-						<dt><a href="penwujiangwen.html" target="_blank"><img src="images/1penwujiangwen/pengwujiang333.jpg" alt="" /></a></dt>
+						<dt><a href="penwujiangwen.shtml" target="_blank"><img src="images/1penwujiangwen/pengwujiang333.jpg" alt="" /></a></dt>
 						<dd><span>◆夏天建筑工地太热<br>◆工期太赶怎么办<br>◆选择雾盛喷雾降温</span></dd>
 					</dl>
 					<h5><span>雾盛喷雾降温</span><b>没有喷雾降温</b></h5>
@@ -115,11 +86,11 @@
 				<div class="sm">
 					<dl class="pk_d1">
 						<dd><span>◆喷雾除尘<br>◆控制空气污染</span></dd>
-						<dt><a href="penwuchuchen.html" target="_blank"><img src="images/2penwuchuchen/penwuchuchen2.jpg" alt="" /></a></dt>
+						<dt><a href="penwuchuchen.shtml" target="_blank"><img src="images/2penwuchuchen/penwuchuchen2.jpg" alt="" /></a></dt>
 					</dl>
 					<em></em>
 					<dl class="pk_d2">
-						<dt><a href="penwuchuchen.html" target="_blank"><img src="images/2penwuchuchen/penwuchu3333.jpg" alt="" /></a></dt>
+						<dt><a href="penwuchuchen.shtml" target="_blank"><img src="images/2penwuchuchen/penwuchu3333.jpg" alt="" /></a></dt>
 						<dd><span>◆建筑工地周边灰尘太大<br>◆路过市民遭殃<br>◆雾盛喷雾降尘为您解决烦劳</span></dd>
 					</dl>
 					<h5><span>雾盛喷雾除尘</span><b>没有喷雾除尘</b></h5>
@@ -127,11 +98,11 @@
 				<div class="sm">
 					<dl class="pk_d1">
 						<dd><span>◆景观造雾<br>◆广州小区景观造雾</span></dd>
-						<dt><a href="jingguanzaowu.html" target="_blank"><img src="images/3jingguanzaowu/jiangguanzaowu13.jpg" alt="" /></a></dt>
+						<dt><a href="jingguanzaowu.shtml" target="_blank"><img src="images/3jingguanzaowu/jiangguanzaowu13.jpg" alt="" /></a></dt>
 					</dl>
 					<em></em>
 					<dl class="pk_d2">
-						<dt><a href="jingguanzaowu.html" target="_blank"><img src="images/3jingguanzaowu/jiangguan333.JPG" alt="" /></a></dt>
+						<dt><a href="jingguanzaowu.shtml" target="_blank"><img src="images/3jingguanzaowu/jiangguan333.JPG" alt="" /></a></dt>
 						<dd><span>◆标准达不到</span></dd>
 					</dl>
 					<h5><span>雾盛景观造雾</span><b>没有景观造雾</b></h5>
@@ -139,11 +110,11 @@
 				<div class="sm">
 					<dl class="pk_d1">
 						<dd><span>◆喷雾加湿<br>◆超市蔬菜区选择喷雾加湿<br>◆蔬菜保持持久新鲜</span></dd>
-						<dt><a href="penwujiasi.html" target="_blank"><img src="images/4penwujiashi/penwujiashi3.jpg" alt="" /></a></dt>
+						<dt><a href="penwujiasi.shtml" target="_blank"><img src="images/4penwujiashi/penwujiashi3.jpg" alt="" /></a></dt>
 					</dl>
 					<em></em>
 					<dl class="pk_d2">
-						<dt><a href="penwujiasi.html" target="_blank"><img src="images/4penwujiashi/penwujia3333.jpg" alt="" /></a></dt>
+						<dt><a href="penwujiasi.shtml" target="_blank"><img src="images/4penwujiashi/penwujia3333.jpg" alt="" /></a></dt>
 						<dd><span>◆没有达到保湿</span></dd>
 					</dl>
 					<h5><span>雾盛喷雾加湿</span><b>没有喷雾加湿</b></h5>
@@ -166,12 +137,12 @@
 						</dl>
 					</div>
 					<p>
-						<a href="goincompany.html" target="_blank"><img src="images/1penwujiangwen/pengwujiangwen1.jpg" alt="" /></a>
+						<a href="goincompany.shtml" target="_blank"><img src="images/1penwujiangwen/pengwujiangwen1.jpg" alt="" /></a>
 					</p>
 				</div>
 				<div class="ys_2">
 					<p>
-						<a href="goincompany.html" target="_blank"><img src="images/1penwujiangwen/pengwujiangwen15.jpg" alt="" /></a>
+						<a href="goincompany.shtml" target="_blank"><img src="images/1penwujiangwen/pengwujiangwen15.jpg" alt="" /></a>
 					</p>
 
 					<div class="ys2_in">
@@ -190,13 +161,13 @@
 		<!--thanks-->
 		<div class="thanks">
 			<div class="content">
-				<h3><span><a href="panter.html" title="更多" target="_blank">+ 更多</a></span><i>
+				<h3><span><a href="panter.shtml" title="更多" target="_blank">+ 更多</a></span><i>
     			<img src="picture/than_txt.jpg" alt="感谢以下公司选择雾盛" />
     			<a href="javascript:;" title="感谢以下公司选择雾盛">感谢以下公司选择雾盛</a></i></h3>
 				<!--合作客户-->
 				<ul id="Scroll">
 					<li v-for="l in list" v-colak>
-						<a :title="l.title" :href="'xiangqing.html?type=partner&id='+l.id" :title="l.title" target="_blank">
+						<a :title="l.title" :href="'xiangqing.shtml?type=partner&id='+l.id" :title="l.title" target="_blank">
 							<img :src="l.imagesPath" :alt="l.title" :title="l.title" />
 							<p class="penwucol">{{l.title}}</p>
 						</a>
@@ -212,7 +183,7 @@
 
 				<!--合作客户-->
 				<p><i>全国免费电话：<b>4008-215-663</b></i>
-					<a href="javascript:;" target="_blank" title="立即咨询">立即咨询</a>
+					<a href="tel:4008215663" title="立即咨询">立即咨询</a>
 				</p>
 			</div>
 		</div>
@@ -220,28 +191,28 @@
 		<div class="cust">
 			<div class="content">
 				<h3>
-					<span><a href="penwuchuchen.html" title="更多" target="_blank">+ 更多</a></span>
+					<span><a href="penwuchuchen.shtml" title="更多" target="_blank">+ 更多</a></span>
 			   		<i><img src="picture/cust_txt.jpg" alt="客户见证" /><a href="javascript:;" title="客户见证">客户见证</a></i>
 				</h3>
 				<dl class="fl">
-					<dt><a href="penwujiangwen.html" target="_blank" title="汽车站公交站台人太多夏天喷雾降温">
+					<dt><a href="penwujiangwen.shtml" target="_blank" title="汽车站公交站台人太多夏天喷雾降温">
                         <img src="images/1penwujiangwen/pengwujiangwen13.jpg" src="images/1penwujiangwen/pengwujiangwen13.jpg" alt="汽车站公交站台人太多夏天喷雾降温" title="汽车站公交站台人太多夏天喷雾降温" /></a>
 					</dt>
 					<dd>
 						<i><a href="javascript:;" target="_blank" title="汽车站公交站台人太多夏天喷雾降温">汽车站公交站台人太多夏天喷雾降温</a></i>
 						<b><a href="javascript:;" title=""></a></b>
 						<p>在盛夏，当城市气温达到35℃以上时，即使打着伞，戴着太阳镜，来自太阳的直射和来自地面的反射...</p>
-						<em><a href="penwujiangwen.html" target="_blank" title="查看更多">查看更多+</a></em>
+						<em><a href="penwujiangwen.shtml" target="_blank" title="查看更多">查看更多+</a></em>
 					</dd>
 				</dl>
 				<dl class="fr">
-					<dt><a href="penwuchuchen.html" target="_blank" title="喷雾降尘---雾盛">
+					<dt><a href="penwuchuchen.shtml" target="_blank" title="喷雾降尘---雾盛">
                         <img src="images/2penwuchuchen/penwuchuchen3.jpg" src="images/2penwuchuchen/penwuchuchen3.jpg" alt="喷雾降尘---雾盛" title="喷雾降尘---雾盛" /></a></dt>
 					<dd>
 						<i><a href="javascript:;" target="_blank" title="喷雾降尘---雾盛">喷雾降尘---雾盛</a></i>
 						<b><a href="javascript:;" title=""></a></b>
 						<p>近来，很多城市出现空气污染严重现象，空气污染严重主要是污染物排放超标引起。其中粉尘超标排放是其中的主要因素之一...</p>
-						<em><a href="penwuchuchen.html" target="_blank" title="查看更多">查看更多+</a></em>
+						<em><a href="penwuchuchen.shtml" target="_blank" title="查看更多">查看更多+</a></em>
 					</dd>
 				</dl>
 			</div>
@@ -249,10 +220,10 @@
 		<!--sucess成功案例-->
 		<div class="cast">
 			<div class="content">
-				<h3><span><a href="penwuchuchou.html" target="_blank" title="更多">+ 更多</a></span><i><a href="javascript:;" title="成功案例">成功案例<img src="picture/cast_txt.jpg" alt="成功案例" /></a></i></h3>
+				<h3><span><a href="penwuchuchou.shtml" target="_blank" title="更多">+ 更多</a></span><i><a href="javascript:;" title="成功案例">成功案例<img src="picture/cast_txt.jpg" alt="成功案例" /></a></i></h3>
 				<ul id="anls">
 					<li v-for="item in items">
-						<a :title="item.title" :href="'xiangqing.html?type=success&id='+item.id" target="_blank">
+						<a :title="item.title" :href="'xiangqing.shtml?type=success&id='+item.id" target="_blank">
 							<span><img :src="item.imagesPath" :alt="item.title" class="sucess" :title="item.title" /></span> {{item.title}}
 						</a>
 					</li>
@@ -265,28 +236,28 @@
 			<div class="content">
 				<!--走进雾盛-->
 				<div class="into">
-					<h3><span><a href="goincompany.html" title="更多" target="_blank">+ 更多</a></span><i><a href="javascript:;" title="走进雾盛">走进雾盛<img src="picture/into_txt.jpg" alt="走进雾盛" /></a></i></h3>
+					<h3><span><a href="goincompany.shtml" title="更多" target="_blank">+ 更多</a></span><i><a href="javascript:;" title="走进雾盛">走进雾盛<img src="picture/into_txt.jpg" alt="走进雾盛" /></a></i></h3>
 					<dl>
-						<dt><a title="走进雾盛" href="goincompany.html" target="_blank">
+						<dt><a title="走进雾盛" href="goincompany.shtml" target="_blank">
                         	<img src="images/1penwujiangwen/pengwujiangwen10.jpg" alt="走进雾盛" title="走进雾盛" /></a>
                         </dt>
 						<dd>
 							<i><a title="走进雾盛" href="javascript:;" target="_blank">走进雾盛</a></i>
 							<p> 上海雾盛实业有限公司是一家集喷雾，喷泉，净化水设备等环保产品研发、设计、生产、安装、调试及培训为一体的大型综合性公司，公司长期专致改善室外环境，独特高效的降温节能设计。系列工程有：人造雾工程，冷雾降温工程，景观造雾工程...</p>
-							<b><a href="goincompany.html" target="_blank" title="查看详请">查看详请</a></b>
+							<b><a href="goincompany.shtml" target="_blank" title="查看详请">查看详请</a></b>
 						</dd>
 					</dl>
 
 				</div>
 				<!--荣誉资质-->
 				<div class="honor">
-					<h3><span><a href="honor.html" title="更多" target="_blank">+ 更多</a></span><i><a href="javascript:;" title="荣誉资质">荣誉资质<img src="picture/hon_txt.jpg" alt="荣誉资质" /></a></i></h3>
+					<h3><span><a href="honor.shtml" title="更多" target="_blank">+ 更多</a></span><i><a href="javascript:;" title="荣誉资质">荣誉资质<img src="picture/hon_txt.jpg" alt="荣誉资质" /></a></i></h3>
 					<div class="hon_l">
 						<a id="ryleft" href="javascript:;"></a>
 					</div>
 					<ul id="Scrollry">
 						<li v-for="item in items" v-cloak>
-							<a title="高新技术产业" :href="'xiangqing.html?type=honor&id='+item.id" target="_blank"><span>
+							<a title="高新技术产业" :href="'xiangqing.shtml?type=honor&id='+item.id" target="_blank"><span>
 								<img :src="item.imagesPath" :alt="item.title" :title="item.title" />
 							</span> {{item.title}}</a>
 						</li>
@@ -300,10 +271,10 @@
 		<!--gallery-->
 		<div class="gallery">
 			<div class="content">
-				<h3><span><a href="photoAlbum.html" title="更多" target="_blank">+ 更多</a></span><i><a href="javascript:;" title="企业相册">企业相册<img src="picture/gal_txt.jpg" alt="企业相册" /></a></i></h3>
+				<h3><span><a href="photoAlbum.shtml" title="更多" target="_blank">+ 更多</a></span><i><a href="javascript:;" title="企业相册">企业相册<img src="picture/gal_txt.jpg" alt="企业相册" /></a></i></h3>
 				<ul id="qyxc">
 					<li v-for="photo in photos" v-cloak>
-						<a title="photo.title" :href="'xiangqing.html?type=photAlbum&id='+photo.id" target="_blank">
+						<a title="photo.title" :href="'xiangqing.shtml?type=photAlbum&id='+photo.id" target="_blank">
 							<span><img :src="photo.imagesPath" :alt="photo.title" :title="photo.title" /></span> {{photo.title}}
 						</a>
 					</li>
@@ -371,11 +342,11 @@
 						<!--行业新闻-->
 						<dl>
 							<dt>
-                         		<a title="雾盛人造雾设备的原理" href="news.html" target="_blank">
+                         		<a title="雾盛人造雾设备的原理" href="news.shtml" target="_blank">
                         		<img src="images/3jingguanzaowu/jiangguanzaowu10.jpg" alt="雾盛人造雾设备的原理" title="雾盛人造雾设备的原理" src="js/loading.gif"/></a>
                         	</dt>
 							<dd>
-								<i><a href="news.html" title="雾盛人造雾设备的原理" target="_blank">雾盛人造雾设备的原理...</a></i>
+								<i><a href="news.shtml" title="雾盛人造雾设备的原理" target="_blank">雾盛人造雾设备的原理...</a></i>
 								<p> 纵观各行各业，很多特殊的行业现在有很多人造的东西出现，深圳雾博人造雾设备也是一种人造雾催化中产生...</p>
 								<b><a href="newsDetail.shtml?id=7" target="_blank" title="查看详请">查看详请+</a></b>
 							</dd>
@@ -523,9 +494,9 @@
 				$("#hys").find("i").mouseover(function() {
 					var _dynamic = $(this).text();
 					if(_dynamic == "雾盛动态") {
-						$(this).siblings('span').children().attr("href", "dynamic.html")
+						$(this).siblings('span').children().attr("href", "dynamic.shtml")
 					} else {
-						$(this).siblings('span').children().attr("href", "news.html")
+						$(this).siblings('span').children().attr("href", "news.shtml")
 					}
 					$("div.news").find("div.dyBox").eq($(this).addClass("cur").siblings("i").removeClass("cur").parent('h3').children("i").index(this)).fadeIn().siblings("div.dyBox").hide();
 				}).eq(0).mouseover();

@@ -110,9 +110,46 @@ a.im,a:hover.im{text-decoration:none;height:35px;color:#333; font-size:12px;}
 .h_top li{float:left; height:32px; background:url(../images/h_t6.png) no-repeat right center!important; margin-right:10px; padding-right:2px;}
 .h_top li i{ height:32px; width:3px; display:inline-block; background:url(../images/h_t5.png) no-repeat left center; float:left;}
 .h_top li a{ font:14px "Microsoft YaHei"; color:#434343; line-height:32px; height:32px; display:inline-block; ; background:url(../images/h_t4.jpg) repeat-x left center;float:left;padding:0 19px 0 19px;}
-.h_top .cur{ background:url(../images/h_t3.png) no-repeat right center !important;}
-.h_top .cur i{ background:url(../images/h_t2.png) no-repeat left center;} 
-.h_top .cur a{ background:url(../images/h_t1.jpg) no-repeat center center; color:#fff;}
+
+.index .index{ background:url(../images/h_t3.png) no-repeat right center !important;}
+.index .index i{ background:url(../images/h_t2.png) no-repeat left center;} 
+.index .index a{ background:url(../images/h_t1.jpg) no-repeat center center; color:#fff;}
+
+.penwujiangwen .penwujiangwen{ background:url(../images/h_t3.png) no-repeat right center !important;}
+.penwujiangwen .penwujiangwen i{ background:url(../images/h_t2.png) no-repeat left center;} 
+.penwujiangwen .penwujiangwen a{ background:url(../images/h_t1.jpg) no-repeat center center; color:#fff;}
+
+.penwuchuchen .penwuchuchen{ background:url(../images/h_t3.png) no-repeat right center !important;}
+.penwuchuchen .penwuchuchen i{ background:url(../images/h_t2.png) no-repeat left center;} 
+.penwuchuchen .penwuchuchen a{ background:url(../images/h_t1.jpg) no-repeat center center; color:#fff;}
+
+.jingguanzaowu .jingguanzaowu{ background:url(../images/h_t3.png) no-repeat right center !important;}
+.jingguanzaowu .jingguanzaowu i{ background:url(../images/h_t2.png) no-repeat left center;} 
+.jingguanzaowu .jingguanzaowu a{ background:url(../images/h_t1.jpg) no-repeat center center; color:#fff;}
+
+.penwujiasi .penwujiasi{ background:url(../images/h_t3.png) no-repeat right center !important;}
+.penwujiasi .penwujiasi i{ background:url(../images/h_t2.png) no-repeat left center;} 
+.penwujiasi .penwujiasi a{ background:url(../images/h_t1.jpg) no-repeat center center; color:#fff;}
+
+.penwuchuchou .penwuchuchou{ background:url(../images/h_t3.png) no-repeat right center !important;}
+.penwuchuchou .penwuchuchou i{ background:url(../images/h_t2.png) no-repeat left center;} 
+.penwuchuchou .penwuchuchou a{ background:url(../images/h_t1.jpg) no-repeat center center; color:#fff;}
+
+.wushengzhuji .wushengzhuji{ background:url(../images/h_t3.png) no-repeat right center !important;}
+.wushengzhuji .wushengzhuji i{ background:url(../images/h_t2.png) no-repeat left center;} 
+.wushengzhuji .wushengzhuji a{ background:url(../images/h_t1.jpg) no-repeat center center; color:#fff;}
+
+.wushengguanjian .wushengguanjian{ background:url(../images/h_t3.png) no-repeat right center !important;}
+.wushengguanjian .wushengguanjian i{ background:url(../images/h_t2.png) no-repeat left center;} 
+.wushengguanjian .wushengguanjian a{ background:url(../images/h_t1.jpg) no-repeat center center; color:#fff;}
+
+.video .video{ background:url(../images/h_t3.png) no-repeat right center !important;}
+.video .video i{ background:url(../images/h_t2.png) no-repeat left center;} 
+.video .video a{ background:url(../images/h_t1.jpg) no-repeat center center; color:#fff;}
+
+.aboutour .aboutours{ background:url(../images/h_t3.png) no-repeat right center !important;}
+.aboutour .aboutours i{ background:url(../images/h_t2.png) no-repeat left center;} 
+.aboutour .aboutours a{ background:url(../images/h_t1.jpg) no-repeat center center; color:#fff;}
 
 /*头部结束*
 
