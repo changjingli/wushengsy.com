@@ -17,17 +17,21 @@
 	$arr = [];
 	
 	while ( $row = mysqli_fetch_array($result) ) {
-		$arr[] = array(
+		$arr = array(
 			"id"      => $row['id'     ], // 新闻id
 			"title"   => $row['title'  ], // 新闻标题
 			"author"  => $row['author' ], // 作者
 			"time"    => $row['time'   ], // 发布时间
 			"content" => $row['content'], // 新闻内容
+			"view"    => $row['view'   ], // 浏览次数
 		);
 	}
 	
 	// 输出查询结果
 	echo json_encode($arr);
+	
+	// 对应新闻访问量增加1
+	mysqli_query( $link, "UPDATE news SET view=view+1 where id=".$id );
 		
 	// 释放查询资源
 	mysqli_free_result($result);
