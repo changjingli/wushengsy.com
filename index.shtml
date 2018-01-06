@@ -320,13 +320,12 @@
 		<!--gallery视频-->
 		<div class="gallery">
 			<div class="content">
-				<h3><span><a href="video.html" title="更多" target="_blank">+ 更多</a></span><i><a href="javascript:;" title="视频中心">视频中心<img src="picture/gal_txt.jpg" alt="视频中心" /></a></i></h3>
+				<h3><span><a href="video.shtml" title="更多视频" target="_blank">+ 更多</a></span><i><a href="javascript:;" title="视频中心">视频中心<img src="picture/gal_txt.jpg" alt="视频中心" /></a></i></h3>
 				<ul id="spzx">
-					<li v-for="video in videos" v-cloak>
-						<!--<a title="{{ video.title }}" :href="'xiangqing.html?type=video&id='+video.id" target="_blank">-->
-							<!--<span><video :src="video.imagesPath" :alt="video.title" :title="video.title" controls preload="none" style="max-height: 100%;" /></span>-->
-							<span><img title="{{ video.title }}" src="images/system/icon-tel.png" @click="playVideosBySrc(video.imagesPath)" /></span>
-						<!--</a>-->
+					<li v-for="video in videos" v-on:click="alert(11)" v-cloak>
+						<span>
+							<img :title="video.title" :src="video.poster"  />
+						</span>
 					</li>
 				</ul>
 				<div class="gal_r">
@@ -415,7 +414,7 @@
 		<script src="lib/jquery/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="lib/layer/layer.js" type="text/javascript" charset="utf-8"></script>
 		<script src="lib/swiper/swiper.jquery.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="lib/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/vue/vue.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="js/nsw_index.js"></script>
 		<script type="text/javascript">
 			$(function() {
@@ -468,8 +467,9 @@
 					})
 					Vue.nextTick(reScrollPic("honor", "qyxc", "qyxcleft", "qyxcright", 968, 242, null))
 				})
+				
 				// 视频展示
-				$.getJSON("data/video.json", function(_data) {
+				$.Post("apis/video/getVideoList.php", '', function(_data) {
 					new Vue({
 						el: "#spzx",
 						data: {

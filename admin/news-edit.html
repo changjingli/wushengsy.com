@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+		<link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+		<title>新闻中心</title>
+	</head>
+	<body class="fixed-sidebar full-height-layout gray-bg">
+		
+		<div class="container">
+			<ul id="js-news" class="row">
+				<li v-for="l in list">
+					<div class="col-xs-1">
+						{{ l.id }}
+					</div>
+					<div class="col-xs-9">
+						{{ l.title }}
+					</div>
+					<div class="col-xs-1">
+						<a :href="">编辑</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<script src="../lib/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			$.Post("apis/news/getAllNewsList.php", "", function ( _data ) {
+				var newsList = new Vue({
+					el: "#js-news",
+					data: {
+						list: _data
+					}
+				});
+			});
+			
+		</script>
+		
+	</body>
+</html>

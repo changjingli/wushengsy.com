@@ -1,0 +1,11 @@
+[v-cloak] {
+	display: none !important;
+}
+
+.ws-list {
+	list-style-type: none;
+}
+
+.ws-list-item {
+	margin: 1em 0;
+}
