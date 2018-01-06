@@ -33,13 +33,13 @@
 				<div class="form-group">
 					<label for="title">新闻内容：</label>
 					<!-- 加载编辑器的容器 -->
-			    <script id="container" name="content" type="text/plain" v-html="d.content"></script>
+			    	<script id="container" name="content" type="text/plain" v-html="d.content"></script>
 				</div>
 				
 				<hr />
 
 				<div class="form-group text-center">
-					<button type="button" class="btn btn-success mlr15">提交</button>
+					<button type="button" class="btn btn-success mlr15" @click="submitNews" >提交</button>
 					<button type="reset" class="btn btn-danger mlr15">重置</button>
 				</div>
 			</fieldset>
@@ -48,6 +48,7 @@
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 		<script src="../js/nsw_index.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../lib/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../lib/layer/layer.js" ></script>></script>
 		<script src="ueditor/utf8-php/ueditor.config.js" type="text/javascript" charset="utf-8"></script>
 		<script src="ueditor/utf8-php/ueditor.all.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
@@ -59,8 +60,20 @@
 					el: "#js-news-edit",
 					data: {
 						d: _data
+					},
+					methods: {
+						submitNews: function () {
+							$.Post("apis/news/editNewsById.php", {
+								"title": $("#title").val(),
+								"author": $("#author").val(),
+								"view": parseInt( $("#view").val() ),
+								"content": ue.getContext()
+							}, function ( d ) {
+								layer.msg( d.desc );
+							});
+						}
 					}
-				})
+				});
 				
 			});
 		</script>
