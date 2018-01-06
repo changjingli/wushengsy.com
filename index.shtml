@@ -355,14 +355,14 @@
 							<dd>
 								<i><a href="javascript:;" title="人工造雾工程在园林造景中“四大事项”">人工造雾工程在园林造景中“四大事项”</a></i>
 								<p>人工造雾工程在园林造景中“四大事项”……</p>
-								<b><a href="dynamic.html" target="_blank" title="查看详请">查看详请+</a></b>
+								<b><a href="newsDetail.shtml?id=1" target="_blank" title="查看详请">查看详请+</a></b>
 							</dd>
 						</dl>
 
 						<ul>
 							<li v-for="dynamic in dynamics" v-cloak>
 								<span>{{ dynamic.time }}</span>
-								<a href="dynamic.html" :title="dynamic.title " target="_blank">{{ dynamic.title }}</a>
+								<a :href="'newsDetail.shtml?id=' + dynamic.id" :title="dynamic.title " target="_blank">{{ dynamic.title }}</a>
 							</li>
 						</ul>
 					</div>
@@ -377,13 +377,13 @@
 							<dd>
 								<i><a href="news.html" title="雾盛人造雾设备的原理" target="_blank">雾盛人造雾设备的原理...</a></i>
 								<p> 纵观各行各业，很多特殊的行业现在有很多人造的东西出现，深圳雾博人造雾设备也是一种人造雾催化中产生...</p>
-								<b><a href="news.html" target="_blank" title="查看详请">查看详请+</a></b>
+								<b><a href="newsDetail.shtml?id=7" target="_blank" title="查看详请">查看详请+</a></b>
 							</dd>
 						</dl>
 						<ul>
 							<li v-for="n in news" v-cloak>
 								<span>{{ n.time }}</span>
-								<a href="news.html" :title="n.title" target="_blank">{{ n.title }}</a>
+								<a :href="'newsDetail.shtml?id=' + n.id" :title="n.title" target="_blank">{{ n.title }}</a>
 							</li>
 
 						</ul>
@@ -393,11 +393,11 @@
 				<!--行业咨询-->
 				<!--常见问题解答-->
 				<div class="faq">
-					<h3><span><a href="question.html" target="_blank" title="更多">more +</a></span><i><a href="javascript:;" title="常见问题解答">常见问题解答<img src="picture/faq_txt.jpg" alt="常见问题解答" /></a></i></h3>
+					<h3><span><a href="question.shtml" target="_blank" title="更多">more +</a></span><i><a href="javascript:;" title="常见问题解答">常见问题解答<img src="picture/faq_txt.jpg" alt="常见问题解答" /></a></i></h3>
 					<div id="question">
 						<dl v-for="question in questions" v-cloak>
-							<dt><a href="question.html" target="_blank">{{question.title}}</a></dt>
-							<dd class="questiondd"><a href="question.html" target="_blank">{{question.foo}}</a></dd>
+							<dt><a href="question.shtml" target="_blank">{{question.title}}</a></dt>
+							<dd class="questiondd"><a href="question.shtml" target="_blank">{{question.foo}}</a></dd>
 						</dl>
 					</div>
 				</div>
