@@ -1,42 +1,70 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
 		<link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
-		<title>新闻中心</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../lib/layer/theme/default/layer.css" />
+		<title>编辑新闻</title>
 	</head>
+
 	<body class="fixed-sidebar full-height-layout gray-bg">
-		
-		<div class="container">
-			<ul id="js-news" class="row">
-				<li v-for="l in list">
-					<div class="col-xs-1">
-						{{ l.id }}
-					</div>
-					<div class="col-xs-9">
-						{{ l.title }}
-					</div>
-					<div class="col-xs-1">
-						<a :href="">编辑</a>
-					</div>
-				</li>
-			</ul>
-		</div>
-		
+
+		<form method="post" class="container-fluid">
+			<fieldset id="js-news-edit">
+				<legend>编辑新闻</legend>
+				<div class="form-group">
+					<label for="title">新闻标题：</label>
+					<input type="text" class="form-control" id="title" name="title" maxlength="50" :value="d.title" />
+				</div>
+
+				<div class="form-group">
+					<label for="author">作者：</label>
+					<input type="text" class="form-control" id="author" name="author" maxlength="10" :value="d.author" />
+				</div>
+
+				<div class="form-group">
+					<label for="view">浏览次数：</label>
+					<input type="number" class="form-control" id="view" name="view" :value="d.view" />
+				</div>
+				
+				<div class="form-group">
+					<label for="title">新闻内容：</label>
+					<!-- 加载编辑器的容器 -->
+			    <script id="container" name="content" type="text/plain" v-html="d.content"></script>
+				</div>
+				
+				<hr />
+
+				<div class="form-group text-center">
+					<button type="button" class="btn btn-success mlr15">提交</button>
+					<button type="reset" class="btn btn-danger mlr15">重置</button>
+				</div>
+			</fieldset>
+		</form>
+
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="../js/nsw_index.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../lib/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="ueditor/utf8-php/ueditor.config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="ueditor/utf8-php/ueditor.all.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
-			
-			$.Post("apis/news/getAllNewsList.php", "", function ( _data ) {
-				var newsList = new Vue({
-					el: "#js-news",
+			$.Post("apis/news/getNewsDetail.php", {
+				id: getPageVar("id")
+			}, function(_data) {
+				var ue = UE.getEditor('container');
+				var detail = new Vue({
+					el: "#js-news-edit",
 					data: {
-						list: _data
+						d: _data
 					}
-				});
+				})
+				
 			});
-			
 		</script>
-		
+
 	</body>
+
 </html>

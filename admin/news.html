@@ -21,10 +21,10 @@
 					{{ l.title }}
 				</div>
 				<div class="col-xs-1">
-					<a :href="'news-edit.html?id=' + l.id">编辑</a>
+					<a class="btn btn-primary J_menuItem" :href="'news-edit.html?id=' + l.id">编辑</a>
 				</div>
 				<div class="col-xs-1">
-					<a href="javascript:;" @click="deleteNews(l.id, l.title, index)">删除</a>
+					<a class="btn btn-danger" href="javascript:;" @click="deleteNews(l.id, l.title, index)">删除</a>
 				</div>
 			</li>
 		</ul>

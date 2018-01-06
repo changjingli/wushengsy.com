@@ -2,10 +2,17 @@
 	display: none !important;
 }
 
+.mlr15 {
+	margin: 0 15px;
+}
+
 .ws-list {
 	list-style-type: none;
 }
 
 .ws-list-item {
-	margin: 1em 0;
+	padding-bottom: 0.5em;
+	line-height: 50px;
+	margin: 0.5em 0;
+	border-bottom: .5px solid #ccc;
 }
