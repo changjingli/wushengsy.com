@@ -14,6 +14,7 @@
 		<link href="css/resetcommonindex.css" rel="stylesheet" type="text/css" />
 		<link rel="preload" as="image" href="images/system/logo.png" />
 		<link rel="preload" as="image" href="images/h_bj.jpg" />
+		<link rel="shortcut icon" href="/favicon.ico" />
 	</head>
 
 	<body class="index">
@@ -22,9 +23,9 @@
 		<!--轮播图-->
 		<div id="carousel" class="swiper-container">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide"><img src="images/carousel/flash.jpg" /></div>
-				<div class="swiper-slide"><img src="images/carousel/flash2.jpg" /></div>
-				<div class="swiper-slide"><img src="images/carousel/flash3.jpg" /></div>
+				<a :href="l.href" class="swiper-slide" v-for="l in list" v-cloak>
+					<img :src="l.src" :alt="l.alt" />
+				</a>
 			</div>
 			<div class="swiper-pagination"></div>
 		</div>
@@ -378,10 +379,6 @@
 		<!-- #include file="footer.html" -->
 		
 		<!-- 返回顶部 -->
-		<!-- Baidu Button BEGIN 百度分享开始 -->
-		<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=2&amp;pos=left&amp;uid=774763"></script>
-		<script type="text/javascript" id="bdshell_js"></script>
-		<!-- Baidu Button END 百度分享结束 -->
 		<script src="lib/jquery/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="lib/layer/layer.js" type="text/javascript" charset="utf-8"></script>
 		<script src="lib/swiper/swiper.jquery.min.js" type="text/javascript" charset="utf-8"></script>
@@ -389,6 +386,28 @@
 		<script type="text/javascript" src="js/nsw_index.js"></script>
 		<script type="text/javascript">
 			$(function() {
+				// 轮播图 
+				$.Post("apis/system/getCarouselList.php", "", function (_data) {
+					var carousel = new Vue({
+						el: "#carousel",
+						data: {
+							list: _data
+						}
+					});
+					
+					Vue.nextTick(function () {
+						// 轮播图
+						var mySwiper = new Swiper('.swiper-container', {
+							autoplay: 3000,
+							pagination: ".swiper-pagination",
+							speed: 300,
+							paginationClickable: true,
+							loop: true,
+							effect: "fade"
+						});
+					});
+				});
+				
 				// 喷雾降温
 				$.getJSON("data/penwujiangwen.json", function(_data) {
 					var $app = new Vue({
@@ -500,16 +519,6 @@
 					}
 					$("div.news").find("div.dyBox").eq($(this).addClass("cur").siblings("i").removeClass("cur").parent('h3').children("i").index(this)).fadeIn().siblings("div.dyBox").hide();
 				}).eq(0).mouseover();
-				document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date() / 3600000);
-				// 轮播图
-				var mySwiper = new Swiper('.swiper-container', {
-					autoplay: 3000,
-					pagination: ".swiper-pagination",
-					speed: 300,
-					paginationClickable: true,
-					loop: true,
-					effect: "fade"
-				});
 				
 				// 行业新闻
 				$.Post( "apis/news/getIndustryNewsList.php", "", function ( _data ) {
