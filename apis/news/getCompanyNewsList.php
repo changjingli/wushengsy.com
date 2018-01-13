@@ -4,7 +4,7 @@
 	header('Content-type: application/json;charset=utf-8');
 	
 	// sql 查询
-	$query = "select * from news where type='Company'";
+	$query = "select * from news where type='Company' and isDel=0";
 	mysqli_query($link,"set character set 'utf8'");//读库
 	// 执行sql查询
 	$result = mysqli_query($link, $query) or die("sql exec failed");

@@ -14,7 +14,7 @@
 		die( json_encode( $res ) );
 	}
 	// 删除对应新闻
-	$result = mysqli_query( $link, "DELETE from news where id=".$id );
+	$result = mysqli_query( $link, "UPDATE news SET isDel=0 where id=".$id );
 	
 	if ( $result ) {
 		$res = array(
