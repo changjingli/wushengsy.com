@@ -293,8 +293,8 @@
 		<div class="gallery">
 			<div class="content">
 				<h3><span><a href="video.shtml" title="更多视频" target="_blank">+ 更多</a></span><i><a href="javascript:;" title="视频中心">视频中心<img src="picture/gal_txt.jpg" alt="视频中心" /></a></i></h3>
-				<ul id="spzx">
-					<li v-for="video in videos" v-on:click="alert(11)" v-cloak>
+				<ul id="spzx" v-cloak>
+					<li v-for="video in videos" @click="alert(1)">
 						<span>
 							<img :title="video.title" :src="video.poster"  />
 						</span>
@@ -435,32 +435,36 @@
 							list: _data
 						}
 					});
+					
 					Vue.nextTick(reScrollPic("honor", "Scroll", "LeftID", "RightID", 1020, 204, null));
 				});
 				//成功案例
 				$.getJSON("data/success.json", function (_data) {
-					new Vue({
+					var success = new Vue({
 						el:"#anls",
 						data:{
 							items:_data
 						}
-					})
-					Vue.nextTick(reScrollPic("honor", "anls", "", "", 1020, 340, null, true))
+					});
+					
+					Vue.nextTick(function () {
+						reScrollPic("honor", "anls", "", "", 1020, 340, null, true)
+					});
 				})
 				// 企业相册
 				$.getJSON("data/photAlbum.json", function(_data) {
-					new Vue({
+					var album = new Vue({
 						el: "#qyxc",
 						data: {
 							photos: _data
 						}
-					})
+					});
 					Vue.nextTick(reScrollPic("honor", "qyxc", "qyxcleft", "qyxcright", 968, 242, null))
 				})
 				
 				// 视频展示
 				$.Post("apis/video/getVideoList.php", '', function(_data) {
-					new Vue({
+					var video = new Vue({
 						el: "#spzx",
 						data: {
 							videos: _data
@@ -482,7 +486,7 @@
 
 				// 荣誉资质
 				$.getJSON("data/honor.json", function(_data) {
-					new Vue({
+					var honor = new Vue({
 						el: "#Scrollry",
 						data: {
 							items: _data
@@ -492,13 +496,15 @@
 				});
 				//疑难问题解答
 				$.getJSON("data/question.json",function (_data) {
-					new Vue({
+					var question = new Vue({
 						el:"#question",
 						data:{
 							questions:_data
 						}
-					})
-					Vue.nextTick(new Marquee("question", 0, 1, 338, 333, 35, 0, 1000, 22));
+					});
+					Vue.nextTick(function () {
+						var m = new Marquee("question", 0, 1, 338, 333, 35, 0, 1000, 22);
+					});
 				})
 				// 热卖产品
 				$("#uls").find("i").mouseover(function() {
@@ -523,20 +529,20 @@
 				// 行业新闻
 				$.Post( "apis/news/getIndustryNewsList.php", "", function ( _data ) {
 					var _news = new Vue({
-					el:"#news",
-					data:{
-						news:_data
-					}
+						el:"#news",
+						data:{
+							news:_data
+						}
 					});
 				});
 				//雾盛动态
 				$.Post("apis/news/getCompanyNewsList.php", "", function ( _data ) {
-					new Vue({
+					var dynamic = new Vue({
 						el:"#dynamic",
 						data:{
 							dynamics:_data
 						}
-					})
+					});
 				});
 				
 			});

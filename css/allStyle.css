@@ -6,6 +6,10 @@ body {
 	padding-top: 37px;
 }
 
+.swiper-wrapper {
+	min-height: 31.2vw;
+}
+
 .swiper-wrapper img {
 	width: 100%;
 	height: 450px;
@@ -62,7 +66,6 @@ body {
 
 .foots {
 	padding-top: 60px;
-	/*padding-left: 50px;*/
 	font-weight: bold;
 }
 
