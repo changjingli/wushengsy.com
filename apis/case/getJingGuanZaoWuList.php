@@ -7,7 +7,7 @@
 	header('Content-type: application/json;charset=utf-8');
 	
 	// sql 查询
-	$type = "penwujiashi";
+	$type = "jingguanzaowu";
 	$query = "select * from wusheng.case where type='" .$type. "'";
 	mysqli_query($link,"set character set 'utf8'");//读库
 	// 执行sql查询
