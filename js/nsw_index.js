@@ -1016,8 +1016,22 @@ function nanOnly(a) {
  * @param {Object} data
  * @param {Function} callback
  */
-$.Post = function (url, data, callback) {
+$.Post = function () {
 	var urlPrefix="http://www.wushengsy.com/";
+    var args = arguments;
+    var url, data, callback;
+
+    if (args.length == 2) {
+        url = args[0];
+        callback = typeof args[1] === 'function' && args[1];
+    }
+
+    if (args.length == 3) {
+        url = args[0];
+        data = args[1];
+        callback = args[2];
+    }
+
 	$.ajax({
 		type:"post",
 		url: (url.indexOf('http://') == 0 ? url : urlPrefix + url),
