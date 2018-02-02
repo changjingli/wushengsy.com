@@ -28,7 +28,7 @@
 					<ul>
 						<li class="itemli" v-for="itemli in newitemlis" v-cloak>
 							<a :href="'xiangqing.shtml?type=penwujiangwen&id=' + itemli.id" :title="itemli.title" target="_blank">
-								<img class="penwuhei" :src="itemli.imagesPath" :alt="itemli.title"/>
+								<img class="penwuhei" :src="itemli.thumb" :alt="itemli.title"/>
 								<p class="penwucol">{{itemli.title}}</p>
 							</a>
 						</li>
@@ -47,7 +47,7 @@
 		<script src="lib/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(function() {
-				$.getJSON("data/penwujiangwen.json",function (_data) {
+				$.Post("apis/case/getPenWuJiangWenList.php", '',function (_data) {
 					var $app = new Vue({
 						el:'#penwu',
 						data:{
