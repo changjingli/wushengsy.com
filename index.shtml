@@ -296,7 +296,8 @@
 				<ul id="spzx" v-cloak>
 					<li v-for="video in videos" @click="alert(1)">
 						<span>
-							<img :title="video.title" :src="video.poster"  />
+							<!--<img :title="video.title" :src="video.poster"  />-->
+							<video :title="video.title" :src="video.src" :poster="video.poster"></video>
 						</span>
 					</li>
 				</ul>
