@@ -297,7 +297,7 @@
 					<li v-for="video in videos" @click="alert(1)">
 						<span>
 							<!--<img :title="video.title" :src="video.poster"  />-->
-							<video :title="video.title" :src="video.src" :poster="video.poster"></video>
+							<video :title="video.title" :src="video.src" style="max-height: 100%;" preload="auto" controls="auto"></video>
 						</span>
 					</li>
 				</ul>
