@@ -26,11 +26,11 @@
 
 					<hr />
 
-					<div class="content">
-						<img :src="detailData.imagesPath" :alt="detailData.title" />
-					</div>
-					<div class="content">
+					<div class="content" v-if="type === 'video">
 						<video :src="detailData.imagesPath" :alt="detailData.title"  controls="controls" preload="auto" style="width: 100%;max-height: 500px"></video>
+					</div>
+					<div class="content" v-else>
+						<img :src="detailData.imagesPath" :alt="detailData.title" />
 					</div>
 				</div>
 			</div>
@@ -103,7 +103,8 @@
 					var detailApp = new Vue({
 						el: "#detail",
 						data: {
-							detailData: _data[jsonid]
+							detailData: _data[jsonid],
+							type: jsonFile
 						}
 					});
 				})
