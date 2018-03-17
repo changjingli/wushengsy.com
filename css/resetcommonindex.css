@@ -69,7 +69,7 @@ a.im,a:hover.im{text-decoration:none;height:35px;color:#333; font-size:12px;}
 /*--common start--*/
 
 /* -- 页面整体布局 -- */
-.header , .content , .footer { width:1080px; margin:0 auto;  }
+.header , .content , .footer {width:1080px;margin:0 auto;}
 .left { width:201px; float:left; overflow:hidden;}
 .left2 { width:720px; float:left; overflow:hidden;}
 .left3 { width:754px; float:left; overflow:hidden; color:#666;}
@@ -234,11 +234,11 @@ em,i{ font-style:normal;}
 .pro_r h3 i a{ width:122px; height:41px;display:inline-block; font:16px "Microsoft YaHei"; color:#333333;line-height:41px; text-align:center; float:left;}
 .pro_r h3 i a:hover ,.pro_r h3 .cur a { background:url(../images/pro_b3.jpg) no-repeat center center; color:#fff;}
 .pro_r ul{width:740px;/* height:525px; */overflow:hidden;}
-.pro_r li{width:230px;height:260px;float:left;text-align:center;overflow:hidden;margin-right: 5px; margin-top: 5px;}
+.pro_r li{width: 170px;height: 163px;float:left;text-align:center;overflow:hidden;margin-right: 5px;margin-top: 5px;}
 .pro_r .pr_clear{ margin-right:0px;}
-.pro_r li img{ width:228px; height:218px;border:1px solid #cecece;}
+.pro_r li img{width: 100%;height: 131px;border:1px solid #cecece;}
 .pro_r li span{ width:228px; height:230px; display:block; background:url(../images/pto_tm2.png) no-repeat center bottom;}
-.pro_r li a{ font:14px "Microsoft YaHei"; color:#333333; line-height:1.4;}
+.pro_r li a{display: block;font:14px "Microsoft YaHei";color:#333333;line-height:1.4;}
 .pro_r .cur img{ border:3px solid #ec611e; width:224px; height:214px;}
 .pro_r .cur a{ font-weight:bold; color:#ec611e;}
 

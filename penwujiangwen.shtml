@@ -52,7 +52,7 @@
 						el:'#penwu',
 						data:{
 							itemlis:_data,
-							size:6,
+							size: 12,
 							currentPage:1
 						},
 						computed:{
