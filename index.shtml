@@ -167,7 +167,7 @@
     			<a href="javascript:;" title="感谢以下公司选择雾盛">感谢以下公司选择雾盛</a></i></h3>
 				<!--合作客户-->
 				<ul id="Scroll">
-					<li v-for="l in list" v-colak>
+					<li v-for="l in list" v-cloak>
 						<a :title="l.title" :href="'xiangqing.shtml?type=partner&id='+l.id" :title="l.title" target="_blank">
 							<img :src="l.imagesPath" :alt="l.title" :title="l.title" />
 							<p class="penwucol">{{l.title}}</p>
