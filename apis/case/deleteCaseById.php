@@ -13,8 +13,8 @@
 		);
 		die( json_encode( $res ) );
 	}
-	// 删除对应新闻
-	$result = mysqli_query( $link, "UPDATE news SET isDel=1 where id=".$id );
+	// 删除对应案例
+	$result = mysqli_query( $link, "UPDATE case SET isDel=1 where id=".$id );
 	
 	if ( $result ) {
 		$res = array(
