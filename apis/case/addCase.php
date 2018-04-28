@@ -18,12 +18,12 @@
 	if ( $result ) {
 		$res = array(
 			"code" => 1000,
-			"desc" => "删除成功"
+			"desc" => "新增成功"
 		);
 	} else {
 		$res = array(
 			"code" => 2001,
-			"desc" => "删除失败"
+			"desc" => "新增失败"
 		);
 	}
 	
