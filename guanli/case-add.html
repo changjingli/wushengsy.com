@@ -81,7 +81,7 @@
 						
 						data.content = ue.getContent();
 						
-						$.post(prefix + "apis/news/addCase.php", data, function ( d ) {
+						$.post(prefix + "apis/case/addCase.php", data, function ( d ) {
 							layer.msg( d.desc );
 						});
 					}
