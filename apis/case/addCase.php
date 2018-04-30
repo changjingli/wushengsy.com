@@ -13,7 +13,7 @@
 	$content = $_REQUEST[ 'content' ];
 	
 	// 插入对应案例
-	$result = mysqli_query( $link, "INSERT into case (type, title, author, view, content) values('" .$type. "', '" .$title. "', '" .$author. "', '" .$view. "', '" .$content. "')" );
+	$result = mysqli_query( $link, "INSERT into case (type, title, author, view, content) values('$type', '$title', '$author', '$view', '$content')" );
 	
 	if ( $result ) {
 		$res = array(
