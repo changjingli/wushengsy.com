@@ -50,7 +50,7 @@
 				 */
 
 				var jsonFile = getPageParams("type");
-				var jsonid = getPageParams("id");
+				var id = getPageParams("id");
 
 				$.Post("apis/case/getCaseDetail.php", {
 					id: id
