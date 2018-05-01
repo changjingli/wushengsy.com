@@ -25,7 +25,7 @@
 	}
 	
 	// 输出查询结果
-	echo json_encode($arr);
+	echo json_encode($arr, JSON_UNESCAPED_UNICODE);
 		
 	// 释放查询资源
 	mysqli_free_result($result);
