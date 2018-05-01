@@ -8,7 +8,7 @@
 	
 	// sql 查询
 	$type = "jingguanzaowu";
-	$query = "select * from wusheng.case where isDel=0 and type='" .$type. "'";
+	$query = "select * from wusheng.case where isDel=0 and type='$type' sort by id desc";
 	mysqli_query($link,"set character set 'utf8'");//读库
 	// 执行sql查询
 	$result = mysqli_query($link, $query) or die("sql exec failed");
