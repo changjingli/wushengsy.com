@@ -11,8 +11,8 @@
 	
 	if (!$id) {
 		die( array(
-			"code": 2000,
-			"desc": "没有id",
+			"code" => 2000,
+			"desc" => "没有id",
 		) );
 	}
 	// sql 查询

@@ -27,20 +27,20 @@
 					<hr />
 
 					<div class="content" v-if="type === 'video' ">
-						<video :src="detailData.imagesPath" :alt="detailData.title"  controls="controls" preload="auto" style="width: 100%;max-height: 500px"></video>
+						<video :src="detailData.imagesPath" :alt="detailData.title" controls="controls" preload="auto" style="width: 100%;max-height: 500px"></video>
 					</div>
 					<div class="content" v-else v-html="detailData.content"></div>
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- #include file="footer.html" -->
 		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js" charset="utf-8"></script>
 		<script type="text/javascript" src="js/nsw_index.js"></script>
 		<script type="text/javascript">
 			$(function() {
-				function getPageParams ( name ) {
+				function getPageParams(name) {
 					return decodeURI(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURI(name).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
 				}
 
@@ -49,10 +49,12 @@
 				 * jsonIndex {Number} 用来标明要显示数据的下标
 				 */
 
-				var jsonFile  = getPageParams("type");
+				var jsonFile = getPageParams("type");
 				var jsonid = getPageParams("id");
 
-				$.Post("apis/case/getCaseDetail.php",function (_data) {
+				$.Post("apis/case/getCaseDetail.php", {
+					id: id
+				}, function(_data) {
 					var detailApp = new Vue({
 						el: "#detail",
 						data: {
@@ -60,8 +62,8 @@
 							type: jsonFile
 						}
 					});
-				})
-			})
+				});
+			});
 		</script>
 
 	</body>
