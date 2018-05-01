@@ -22,6 +22,7 @@
 	while ( $row = mysqli_fetch_array($result) ) {
 		$arr = array(
 			"id"      => $row['id'     ], // 视频id
+			"src"     => $row['src'    ], // 视频路径
 			"title"   => $row['title'  ], // 视频标题
 			"author"  => $row['author' ], // 作者
 			"time"    => $row['time'   ], // 发布时间
