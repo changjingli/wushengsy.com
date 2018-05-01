@@ -6,10 +6,10 @@
 	$id = @$_REQUEST[ 'id' ];
 	
 	if (!$id) {
-		die( array(
-			"code" => 2000,
+		die( json_encode(array(
+			"code" => "2000",
 			"desc" => "没有id",
-		) );
+		), JSON_UNESCAPED_UNICODE) );
 	}
 	// sql 查询
 	$query = "select * from videos where id=".$id;
