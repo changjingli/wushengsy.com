@@ -1,5 +1,9 @@
 <?php
 	require_once "../conn.php";
+	/*
+	 * @desc 根据指定的ID删除案例
+	 * @author Chang, Jingli
+	 */
 	
 	header('Content-type: application/json;charset=utf-8');
 	
@@ -14,7 +18,7 @@
 		die( json_encode( $res ) );
 	}
 	// 删除对应案例
-	$result = mysqli_query( $link, "UPDATE case SET isDel=1 where id=".$id );
+	$result = mysqli_query( $link, "UPDATE wusheng.case SET isDel=1 where id=".$id );
 	
 	if ( $result ) {
 		$res = array(
