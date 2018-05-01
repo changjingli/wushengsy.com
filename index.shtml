@@ -28,6 +28,12 @@
 			.cases.pro {
 				height: auto;
 			}
+			
+			.changfang {
+				width: 100%;
+				height: 304px;
+				object-fit: cover;
+			}
 		</style>
 	</head>
 
@@ -45,7 +51,7 @@
 				<!-- #include file="left-pro.html" -->
 				<div class="pro_r">
 					<h3 id="uls">
-                <span><a href="penwujiangwen.shtml" title="更多">+ 更多</a></span>
+                <span><a href="jingguanzaowu.shtml" title="更多">+ 更多</a></span>
                 <i><a href="javascript:;" title="应用实例">应用实例</a></i>
             </h3>
 					<!--热卖产品-->
@@ -154,12 +160,12 @@
 						</dl>
 					</div>
 					<p>
-						<a href="goincompany.shtml" target="_blank"><img src="images/1penwujiangwen/pengwujiangwen1.jpg" alt="" /></a>
+						<a href="goincompany.shtml" target="_blank"><img src="images/system/changfang.jpg" class="changfang" alt="雾盛厂房" /></a>
 					</p>
 				</div>
 				<div class="ys_2">
 					<p>
-						<a href="goincompany.shtml" target="_blank"><img src="images/1penwujiangwen/pengwujiangwen15.jpg" alt="" /></a>
+						<a href="goincompany.shtml" target="_blank"><img src="images/system/changfang2.jpg" class="changfang" alt="雾盛厂房" /></a>
 					</p>
 
 					<div class="ys2_in">
@@ -326,7 +332,7 @@
 					<li v-for="video in videos" @click="alert(1)">
 						<span>
 							<!--<img :title="video.title" :src="video.poster"  />-->
-							<video :title="video.title" :src="video.src" style="max-height: 100%;" preload="none"
+							<video :title="video.title" :src="video.src" style="width: 100%;max-height: 100%;" preload="none"
                                    controls="auto"></video>
 						</span>
 					</li>
@@ -353,7 +359,7 @@
 						<!--雾盛动态-->
 						<dl>
 							<dt><a title="人工造雾工程在园林造景中“四大事项”" href="javascript:;" target="_blank">
-                        <img src="images/1penwujiangwen/pengwujiangwen1.jpg" alt="人工造雾工程在园林造景中“四大事项”"
+                        <img src="sucai/photoAblum/photoAblum2.jpg" alt="人工造雾工程在园林造景中“四大事项”"
                              title="人工造雾工程在园林造景中“四大事项”" src="js/loading.gif"/></a>
                     </dt>
 							<dd>
@@ -381,7 +387,7 @@
                     		</dt>
 							<dd>
 								<i><a href="news.shtml" title="雾盛人造雾设备的原理" target="_blank">雾盛人造雾设备的原理...</a></i>
-								<p> 纵观各行各业，很多特殊的行业现在有很多人造的东西出现，深圳雾博人造雾设备也是一种人造雾催化中产生...</p>
+								<p> 纵观各行各业，很多特殊的行业现在有很多人造的东西出现，上海雾盛人造雾设备也是一种人造雾催化中产生...</p>
 								<b><a href="newsDetail.shtml?id=7" target="_blank" title="查看详请">查看详请+</a></b>
 							</dd>
 						</dl>
@@ -438,8 +444,8 @@
 					});
 				});
 
-				// 喷雾降温
-				$.Post("apis/case/getPenWuJiangWenList.php", function(_data) {
+				// 景观造雾
+				$.Post("apis/case/getJingGuanZaoWuList.php", function(_data) {
 					var $app = new Vue({
 						el: '#penwu',
 						data: {
@@ -499,17 +505,6 @@
 						data: {
 							videos: _data
 						},
-						methods: {
-							/**
-							 * @description 通过src全屏播放视频
-							 */
-							playVideosBySrc: function(src) {
-								debugger
-								layer.open({
-									content: "<video src=" + src + " ></video>"
-								})
-							}
-						}
 					});
 					Vue.nextTick(reScrollPic("honor", "spzx", "spleft", "spright", 968, 242, null))
 				});
