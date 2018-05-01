@@ -280,18 +280,19 @@ body {
 
 /* ====== @group xiangqing.shtml begin ====== */
 .detail-title {
-	font-size: 1.6rem;
+	font-size: 20px;
 	text-align: center;
 	line-height: 1.7;
 }
 
 .detail-info {
 	padding: 0;
+	margin: 1.5em 0;
 }
 
-.detail-info li {
-	display: inline-block;
-	width: 33.333%;
+.detail-info span {
+	margin-right: 2em;
+	font-size: 16px;
 	text-align: center;
 }
 
