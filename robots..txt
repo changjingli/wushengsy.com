@@ -1,3 +1,0 @@
-Disallow: /guanli/
-User-agent: *
-Disallow: /apis/*.php

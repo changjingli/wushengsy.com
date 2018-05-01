@@ -269,14 +269,6 @@ body {
 .unfoldfoo {
 	display: none;
 }
-.swiper-pagination-bullet {
-	width: 40px;
-	border-radius: 8px;
-}
-
-.swiper-pagination-bullet-active {
-	background: #ec611e;
-}
 
 /* ====== @group xiangqing.shtml begin ====== */
 .detail-title {
