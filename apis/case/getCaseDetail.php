@@ -25,24 +25,22 @@
 	
 	while ( $row = mysqli_fetch_array($result) ) {
 		$arr = array(
-			"id"      => $row['id'     ], // 新闻id
-			"title"   => $row['title'  ], // 新闻标题
+			"id"      => $row['id'     ], // 案例id
+			"title"   => $row['title'  ], // 案例标题
+			"type"    => $row['type'   ], // 案例标题
 			"author"  => $row['author' ], // 作者
 			"time"    => $row['time'   ], // 发布时间
-			"content" => $row['content'], // 新闻内容
+			"content" => $row['content'], // 案例内容
 			"view"    => $row['view'   ], // 浏览次数
 		);
 	}
 	
 	// 输出查询结果
-	echo json_encode($arr);
+	echo json_encode($arr, JSON_UNESCAPED_UNICODE);
 	
-	// 对应新闻访问量增加1
+	// 对应案例访问量增加1
 	mysqli_query( $link, "UPDATE wusheng.case SET view=view+1 where id=".$id );
 		
-	// 释放查询资源
-	mysqli_free_result($result);
-	
 	// 关闭数据库连接
 	mysqli_close($link);
 ?>
