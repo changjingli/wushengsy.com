@@ -278,12 +278,29 @@ body {
 	background: #ec611e;
 }
 
-/* xiangqing.html */
+/* ====== @group xiangqing.shtml begin ====== */
 .detail-title {
 	font-size: 1.6rem;
 	text-align: center;
 	line-height: 1.7;
 }
+
+.detail-info {
+	padding: 0;
+}
+
+.detail-info li {
+	display: inline-block;
+	width: 33.333%;
+	text-align: center;
+}
+
+.detail img {
+	max-width: 100%;
+}
+
+/* ====== @group xiangqing.shtml end ====== */
+
 .float {
 	float: left;
 }

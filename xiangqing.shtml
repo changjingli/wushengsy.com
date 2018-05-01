@@ -23,6 +23,11 @@
 				<!-- #include file="left-pro.html" -->
 				<div class="pro_r" id="detail" v-cloak>
 					<h1 class="detail-title">{{ detailData.title }}</h1>
+					<ul class="detail-info">
+						<li>发布时间：{{ detailData.time }}</li>
+						<li>作者：{{ detailData.author }}</li>
+						<li>{{ detailData.view }}人浏览</li>
+					</ul>
 
 					<hr />
 
