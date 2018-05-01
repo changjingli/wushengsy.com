@@ -11,9 +11,10 @@
 	$author = $_REQUEST[ 'author' ];
 	$view = $_REQUEST[ 'view' ];
 	$content = $_REQUEST[ 'content' ];
+	$thumb = $_REQUEST[ 'thumb' ];
 	
 	// 插入对应案例
-	$result = mysqli_query( $link, "INSERT into case (type, title, author, view, content) values('$type', '$title', '$author', '$view', '$content')" );
+	$result = mysqli_query( $link, "INSERT into wusheng.case (type, title, author, view, content, thumb) values('$type', '$title', '$author', '$view', '$content', '$thumb')" );
 	
 	if ( $result ) {
 		$res = array(
