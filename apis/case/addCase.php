@@ -28,9 +28,7 @@
 		);
 	}
 	
-	echo json_encode( $res );
-	// 释放查询资源
-	mysqli_free_result($result);
+	echo json_encode( $res, JSON_UNESCAPED_UNICODE );
 	
 	// 关闭数据库连接
 	mysqli_close($link);
