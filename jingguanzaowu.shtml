@@ -16,71 +16,72 @@
 		<!-- #include file="header.html" -->
 
 		<!-- #include file="lijizixun.html" -->
-		
+
 		<!--应用实例-->
 		<div class="pro">
 			<div class="content">
 				<!--左侧菜单栏-->
 				<!-- #include file="left-pro.html" -->
-				
+
 				<div class="pro_r" id="penwu">
 					<!--热卖产品-->
 					<ul>
 						<li class="itemli" v-for="itemli in newitemlis" v-cloak>
 							<a :href="'xiangqing.shtml?type=jingguanzaowu&id='+itemli.id" target="_blank">
-								<img class="penwuhei" :src="itemli.imagesPath" :alt="itemli.title"/>
+								<img class="penwuhei" :src="itemli.imagesPath" :alt="itemli.title" />
 								<p class="penwucol">{{itemli.title}}</p>
 							</a>
 						</li>
 					</ul>
 					<ul id="page-number">
-						<li v-for="number in newnumber" v-cloak><button  class="numberbg" v-on:click="changes( number )">{{ number+1 }}</button></li>
+						<li v-for="number in newnumber" v-cloak><button class="numberbg" v-on:click="changes( number )">{{ number+1 }}</button></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 		<!-- #include file="footer.html" -->
 		<!-- 返回顶部 -->
-		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js" charset="utf-8"></script>
 		<script type="text/javascript" src="js/nsw_index.js"></script>
-		<script src="lib/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(function() {
-				$.getJSON("data/jingguanzaowu.json",function (_data) {
-						var $app = new Vue({
-						el:'#penwu',
-						data:{
-							itemlis:_data,
-							size : 12,
-							currentpage:1
+				$.Post("apis/case/getJingGuanZaoWuList.php", function(_data) {
+					var $app = new Vue({
+						el: '#penwu',
+						data: {
+							itemlis: _data,
+							size: 12,
+							currentpage: 1
 						},
-						methods:{
-							changes:function ( num ) {
+						methods: {
+							changes: function(num) {
 								this.currentpage = num + 1;
 							}
 						},
-						computed:{
-							newnumber:function () {
-								var total = Math.ceil( this.itemlis.length / this.size );
+						computed: {
+							newnumber: function() {
+								var total = Math.ceil(this.itemlis.length / this.size);
 								var arr = [];
-								for (var i=0; i<total; i++) {
+								for(var i = 0; i < total; i++) {
 									arr.push(i)
 								}
 								return arr;
 							},
-							newitemlis:function () {
-								var star = (this.currentpage-1) * this.size;
+							newitemlis: function() {
+								var star = (this.currentpage - 1) * this.size;
 								var end = this.currentpage * this.size;
 								return this.itemlis.slice(star, end)
 							}
 						}
 					})
 					$(".numberbg:first").addClass("addnumberbg");
-					$(".numberbg").on('click',function () {
+					$(".numberbg").on('click', function() {
 						$(this).addClass('addnumberbg').parent().siblings().find('.numberbg').removeClass('addnumberbg')
 					});
 				});
 			});
 		</script>
 	</body>
+
 </html>
