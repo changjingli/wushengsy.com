@@ -28,7 +28,7 @@
 					<ul>
 						<li class="itemli" v-for="itemli in newitemlis" v-cloak>
 							<a :href="'xiangqing.shtml?type=jingguanzaowu&id='+itemli.id" target="_blank">
-								<img class="penwuhei" :src="itemli.imagesPath" :alt="itemli.title" />
+								<img class="penwuhei" :src="itemli.thumb" :alt="itemli.title" />
 								<p class="penwucol">{{itemli.title}}</p>
 							</a>
 						</li>
