@@ -20,7 +20,6 @@
 			"id"      => $row['id'],
 			"title"   => $row['title'],
 			"thumb"   => $row['thumb'],
-			"content" => $row['content'],
 			"type"    => $row['type']
 		);
 	}
