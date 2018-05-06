@@ -26,7 +26,7 @@
 					<!--热卖产品-->
 					<ul>
 						<li class="itemli" v-for="itemli in newitemlis" v-cloak>
-							<a :href="'xiangqing.shtml?type=wushengzhuji&id='+itemli.id" target="_blank">
+							<a :href="'productxiangqing.shtml?type=wushengzhuji&id='+itemli.id" target="_blank">
 								<img class="penwuhei" :src="itemli.imagesPath" :alt="itemli.title"/>
 								<p class="penwucol">{{itemli.title}}</p>
 							</a>
@@ -40,12 +40,12 @@
 		</div>
 		<!-- #include file="footer.html" -->
 		<!-- 返回顶部 -->
-		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js" charset="utf-8"></script>
 		<script type="text/javascript" src="js/nsw_index.js"></script>
-		<script src="lib/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(function() {
-				$.getJSON("data/wushengzhuji.json",function (_data) {
+				$.Post("apis/product/getZhuJiList.php",function (_data) {
 					var $app = new Vue({
 						el:'#penwu',
 						data:{
