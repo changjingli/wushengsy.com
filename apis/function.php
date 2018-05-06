@@ -4,7 +4,7 @@
 	/*
 	 * @desc 获取轮播图列表
 	 */
-	public function getCarouselList () {
+	function getCarouselList () {
 		// sql 查询
 		$query = "select * from carousel";
 		mysqli_query($link,"set character set 'utf8'");//读库
