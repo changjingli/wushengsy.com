@@ -6,8 +6,8 @@
 	
 	header('Content-type: application/json;charset=utf-8');
 	
-	$carouseList = getCarouselList();
-	$artnerList = getPartnerList();
+	$carouseList = ws_system::getCarouselList();
+	$artnerList = ws_system::getPartnerList();
 	
 	$res = array(
 		"carouseList" => $carouseList,
