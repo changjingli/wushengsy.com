@@ -6,7 +6,7 @@
 		 * @desc 获取轮播图列表
 		 */
 		public static function getCarouselList () {
-			global $link;
+			$link = $GLOBALS[ '$link' ];
 			
 			// sql 查询
 			$query = "select * from carousel";
@@ -37,7 +37,7 @@
 		 * @desc 获取合作伙伴列表
 		 */
 		public static function getPartnerList () {
-			global $link;
+			$link = $GLOBALS[ '$link' ];
 			
 			// sql 查询
 			$query = "select * from partner";
