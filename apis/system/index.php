@@ -16,5 +16,5 @@
 		"partnerList" => $partnerList,
 	);
 	
-	echo json_encode($res, JSON_UNESCAPED_UNICODE);
+	ws_system::response( $res );
 ?>
