@@ -61,7 +61,7 @@
 			// 释放查询资源
 			mysqli_free_result($result);
 			// 关闭数据库连接
-			ws_db->close($link);
+			ws_db::close($link);
 			// 返回查询结果
 			return $arr;
 		}
@@ -91,7 +91,7 @@
 			// 释放查询资源
 			mysqli_free_result($result);
 			// 关闭数据库连接
-			ws_db->close($link);
+			ws_db::close($link);
 			// 返回查询结果
 			return $arr;
 		}
