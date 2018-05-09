@@ -1,13 +1,39 @@
 <?php
-	require_once  "conn.php";
+//	require_once  "conn.php";
+	
+	class ws_db {
+		
+		
+		public static function getLink () {
+			/*$hostname = $GLOBALS['hostname'];
+			$user = $GLOBALS['user'];
+			$password = $GLOBALS['password'];*/
+			$dev = true;
+			$hostname = "127.0.0.1";
+			$user = "wusheng";
+			$password = "wusheng";
+			$database = "wusheng";
+			
+			$link = mysqli_connect($hostname, $user, $password);
+			
+			if ( !$link ) {
+				die( "数据库连接失败" );
+			}
+			
+			mysqli_select_db($link, $database )
+				or die( "数据表选择失败" );
+				
+			return $link;
+		}
+	}
 	
 	class ws_system {
 		/*
 		 * @desc 获取轮播图列表
 		 */
 		public static function getCarouselList () {
-			$link = $GLOBALS[ '$link' ];
-			
+			$link = ws_db::getLink();
+
 			// sql 查询
 			$query = "select * from carousel";
 			mysqli_query($link,"set character set 'utf8'");//读库
@@ -37,7 +63,7 @@
 		 * @desc 获取合作伙伴列表
 		 */
 		public static function getPartnerList () {
-			$link = $GLOBALS[ '$link' ];
+			$link = ws_db::getLink();
 			
 			// sql 查询
 			$query = "select * from partner";

@@ -6,12 +6,14 @@
 	
 	header('Content-type: application/json;charset=utf-8');
 	
+	// 轮播图
 	$carouseList = ws_system::getCarouselList();
-	$artnerList = ws_system::getPartnerList();
+	// 合作伙伴
+	$partnerList = ws_system::getPartnerList();
 	
 	$res = array(
 		"carouseList" => $carouseList,
-		"artnerList" => $partnerList,
+		"partnerList" => $partnerList,
 	);
 	
 	echo json_encode($res, JSON_UNESCAPED_UNICODE);
