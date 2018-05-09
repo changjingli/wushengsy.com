@@ -3,12 +3,10 @@
 	
 	class ws_db {
 		
-		
+		/*
+		 * @desc 数据库连接
+		 */
 		public static function getLink () {
-			/*$hostname = $GLOBALS['hostname'];
-			$user = $GLOBALS['user'];
-			$password = $GLOBALS['password'];*/
-			$dev = true;
 			$hostname = "127.0.0.1";
 			$user = "wusheng";
 			$password = "wusheng";
@@ -24,6 +22,15 @@
 				or die( "数据表选择失败" );
 				
 			return $link;
+		}
+		
+		/*
+		 * @desc 释放数据库连接
+		 */
+		public static function close ( $link ) {
+			if ( $link ) {
+				mysqli_close($link);
+			}
 		}
 	}
 	
@@ -54,7 +61,7 @@
 			// 释放查询资源
 			mysqli_free_result($result);
 			// 关闭数据库连接
-			mysqli_close($link);
+			ws_db->close($link);
 			// 返回查询结果
 			return $arr;
 		}
@@ -84,7 +91,7 @@
 			// 释放查询资源
 			mysqli_free_result($result);
 			// 关闭数据库连接
-			mysqli_close($link);
+			ws_db->close($link);
 			// 返回查询结果
 			return $arr;
 		}
