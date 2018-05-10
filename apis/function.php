@@ -1,27 +1,23 @@
 <?php
-
-    /**
-     * Class ws_db
-     * @desc 数据库模块
-     */
-    class ws_db {
-
+	class ws_db {
 		/*
 		 * @desc 数据库连接
 		 */
-		public static function getLink () {
-			$hostname = "127.0.0.1";
-			$user = "wusheng";
-			$password = "wusheng";
-			$database = "wusheng";
+		
+		private $hostname = "127.0.0.1";
+		private $user = "wusheng";
+		private $password = "wusheng";
+		private $database = "wusheng";
+		
+		public function getLink () {
 
-			$link = mysqli_connect($hostname, $user, $password);
+			$link = mysqli_connect($this->hostname, $this->user, $this->password);
 
 			if ( !$link ) {
 				die( "数据库连接失败" );
 			}
 
-			mysqli_select_db($link, $database )
+			mysqli_select_db($link, $this->database )
 				or die( "数据表选择失败" );
 
 			return $link;
@@ -30,7 +26,7 @@
 		/*
 		 * @desc 释放数据库连接
 		 */
-		public static function close ( $link ) {
+		public function close ( $link ) {
 			if ( $link ) {
 				mysqli_close( $link );
 			}
@@ -39,7 +35,7 @@
 		/*
 		 * 释放查询资源
 		 */
-		public static function free ( $result ) {
+		public function free ( $result ) {
 			if ( $result ) {
 				mysqli_free_result( $result );
 			}
@@ -54,8 +50,9 @@
 		/*
 		 * @desc 获取轮播图列表
 		 */
-		public static function getCarouselList () {
-			$link = ws_db::getLink();
+		public function getCarouselList () {
+			$db = new ws_db();
+			$link = $db->getLink();
 
 			// sql 查询
 			$query = "select * from carousel";
@@ -75,9 +72,9 @@
 			}
 
 			// 释放查询资源
-			ws_db::free($result);
+			$db->free($result);
 			// 关闭数据库连接
-			ws_db::close($link);
+			$db->close($link);
 			// 返回查询结果
 			return $arr;
 		}
@@ -85,8 +82,9 @@
 		/*
 		 * @desc 获取合作伙伴列表
 		 */
-		public static function getPartnerList () {
-			$link = ws_db::getLink();
+		public function getPartnerList () {
+			$db = new ws_db();
+			$link = $db->getLink();
 
 			// sql 查询
 			$query = "select * from partner";
@@ -105,9 +103,9 @@
 			}
 
 			// 释放查询资源
-			ws_db::free( $result );
+			$db->free( $result );
 			// 关闭数据库连接
-			ws_db::close( $link );
+			$db->close($link);
 			// 返回查询结果
 			return $arr;
 		}
@@ -135,7 +133,8 @@
          * @return array
          */
 	    public static function getAllNewsList () {
-            $link = ws_db::getLink();
+            $db = new ws_db();
+			$link = $db->getLink();
 
             // sql 查询
             $query = "select * from news where isDel = 0";
@@ -153,8 +152,8 @@
                 );
             }
 
-            ws_db::free($result);
-            ws_db::close($link);
+            $db->free($result);
+            $db->close($link);
             return $arr;
         }
 
@@ -163,7 +162,8 @@
          * @return array
          */
         public static function getCompanyNewsList () {
-	        $link = ws_db::getLink();
+	        $db = new ws_db();
+			$link = $db->getLink();
 
             // sql 查询
             $query = "select * from news where type='Company' and isDel=0";
@@ -181,8 +181,8 @@
                 );
             }
 
-            ws_db::free($result);
-            ws_db::close($link);
+            $db->free($result);
+            $db->close($link);
             return $arr;
         }
     }
