@@ -85,10 +85,23 @@ class ws_system {
         }
     }
 
+    /**
+     * @desc id不存在时处理结果
+     */
     public function idNotExist () {
         $this->response( array(
             "code"  => "2001",
             "desc"  => "请传入id"
+        ) );
+    }
+
+    /**
+     * @desc 返回空数据集时的处理
+     */
+    public function rowsNotExist () {
+        $this->response( array(
+            "code"  => "3000",
+            "desc"  => "未找到与该id匹配的记录"
         ) );
     }
 
