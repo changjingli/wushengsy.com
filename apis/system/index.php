@@ -20,4 +20,3 @@
 	);
 	
 	ws_system::response( $res );
-?>
