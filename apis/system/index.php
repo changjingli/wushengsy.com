@@ -18,5 +18,5 @@
 		"carouseList" => $carouseList,
 		"partnerList" => $partnerList,
 	);
-	
-	ws_system::response( $res );
+
+    $system->response( $res );

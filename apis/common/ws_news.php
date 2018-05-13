@@ -5,6 +5,10 @@
  * Date: 2018/5/13
  * Time: 16:02
  */
+
+require_once "../common/ws_db.php";
+require_once "../common/ws_system.php";
+
 /**
  * Class ws_news
  * @desc 新闻模块
