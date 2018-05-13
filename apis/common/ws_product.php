@@ -98,7 +98,7 @@ class ws_product {
             $system->rowsNotExist();
             exit();
         }
-        
+
         // 对应案例访问量增加1
         mysqli_query( $link, "UPDATE wusheng.product SET view=view+1 where id=".$id );
 

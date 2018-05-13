@@ -19,7 +19,7 @@ class ws_news {
      * @desc 获取所有新闻列表
      * @return array
      */
-    public static function getAllNewsList () {
+    public function getAllNewsList () {
         $db = new ws_db();
         $link = $db->getLink();
 
@@ -48,7 +48,7 @@ class ws_news {
      * @desc 获取雾盛动态列表
      * @return array
      */
-    public static function getCompanyNewsList () {
+    public function getCompanyNewsList () {
         $db = new ws_db();
         $link = $db->getLink();
 
@@ -62,9 +62,9 @@ class ws_news {
 
         while ( $row = mysqli_fetch_array($result) ) {
             $arr[] = array(
-                "id"    => $row['id'],
+                "id"    => $row['id'   ],
                 "title" => $row['title'],
-                "time"  => $row['time']
+                "time"  => $row['time' ]
             );
         }
 
