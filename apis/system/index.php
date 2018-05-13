@@ -2,7 +2,8 @@
 	/*
 	 * @desc 雾盛首页接口
 	 */
-	require_once "../function.php";
+	require_once "../common/ws_db.php";
+	require_once "../common/ws_system.php";
 	
 	header('Content-type: application/json;charset=utf-8');
 	
