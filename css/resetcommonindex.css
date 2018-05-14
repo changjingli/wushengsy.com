@@ -97,10 +97,11 @@ a.im,a:hover.im{text-decoration:none;height:35px;color:#333; font-size:12px;}
 
 /*头部开始*/
 .h_top{ background:url(../images/h_bj.jpg) no-repeat center top; background-size:cover; height:197px; overflow:hidden;}
-.h_top p{ height:38px; overflow:hidden;}
+.h_top p{ height:38px; overflow:hidden;display: inline;}
 .h_top p , .h_top p a{ font:14px "Microsoft YaHei"; color:#333333; line-height:38px;}
 .h_top p span{ float:right; width:316px;height:38px; overflow:hidden;}
 .h_top p a{ margin:0 5px; display:inline-block;}
+.h_title{font-size: 14px;display: inline-block;}
 .h_logo{ height:128px; overflow:hidden;} 
 .h_logo h1{ width:147px; height:75px; float:left; margin:20px 22px 0 0; background:url(../images/h_xx.jpg) no-repeat 145px 12px;}
 .h_logo h1 img{ width:119px; height:75px;}
