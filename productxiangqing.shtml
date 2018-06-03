@@ -32,9 +32,7 @@
 						<span>{{ detailData.view }}人浏览</span>
 					</div>
 
-					<div class="detail-content">
-						<video :src="detailData.src" :alt="detailData.title" controls="controls" preload="auto" style="width: 100%;max-height: 500px"></video>
-					</div>
+					<div class="detail-content" v-html="detailData.content"></div>
 				</div>
 			</div>
 		</div>
@@ -57,7 +55,7 @@
 				var jsonFile = getPageParams("type");
 				var id = getPageParams("id");
 
-				$.Post("apis/product/getProductDetail.php.php", {
+				$.Post("apis/product/getProductDetail.php", {
 					id: id
 				}, function(_data) {
 					var detailApp = new Vue({
