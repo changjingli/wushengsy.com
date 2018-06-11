@@ -9,6 +9,8 @@
  * Class ws_system
  * @desc 系统模块
  */
+require_once "../common/ws_db.php";
+
 class ws_system {
     /*
      * @desc 获取轮播图列表
@@ -77,10 +79,30 @@ class ws_system {
      * @desc 输出需要返回的值
      * @param $res {Array} 需要输出的值
      */
-    public static function response ( $res ) {
+    public function response ( $res ) {
         if ($res) {
             echo json_encode($res, JSON_UNESCAPED_UNICODE);
         }
+    }
+
+    /**
+     * @desc id不存在时处理结果
+     */
+    public function idNotExist () {
+        $this->response( array(
+            "code"  => "2001",
+            "desc"  => "请传入id"
+        ) );
+    }
+
+    /**
+     * @desc 返回空数据集时的处理
+     */
+    public function rowsNotExist () {
+        $this->response( array(
+            "code"  => "3000",
+            "desc"  => "未找到与该id匹配的记录"
+        ) );
     }
 
 }

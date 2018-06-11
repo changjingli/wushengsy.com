@@ -90,12 +90,12 @@
 					<dl class="pk_d1">
 						<dd><span>◆喷雾降温<br/>◆公园喷雾降温</span></dd>
 						<dt><a href="penwujiangwen.shtml" target="_blank"><img src="images/1penwujiangwen/pengwujiangwen3.jpg"
-                                                                       alt=""/></a></dt>
+                                                                       alt="喷雾降温,公园喷雾降温"/></a></dt>
 					</dl>
 					<em></em>
 					<dl class="pk_d2">
 						<dt><a href="penwujiangwen.shtml" target="_blank"><img src="images/1penwujiangwen/pengwujiang333.jpg"
-                                                                       alt=""/></a></dt>
+                                                                       alt="夏天建筑工地太热,工期太赶怎么办,选择雾盛喷雾降温"/></a></dt>
 						<dd><span>◆夏天建筑工地太热<br>◆工期太赶怎么办<br>◆选择雾盛喷雾降温</span></dd>
 					</dl>
 					<h5><span>雾盛喷雾降温</span><b>没有喷雾降温</b></h5>
@@ -104,12 +104,12 @@
 					<dl class="pk_d1">
 						<dd><span>◆喷雾除尘<br>◆控制空气污染</span></dd>
 						<dt><a href="penwuchuchen.shtml" target="_blank"><img src="images/2penwuchuchen/penwuchuchen2.jpg"
-                                                                      alt=""/></a></dt>
+                                                                      alt="喷雾除尘,控制空气污染"/></a></dt>
 					</dl>
 					<em></em>
 					<dl class="pk_d2">
 						<dt><a href="penwuchuchen.shtml" target="_blank"><img src="images/2penwuchuchen/penwuchu3333.jpg"
-                                                                      alt=""/></a></dt>
+                                                                      alt="建筑工地周边灰尘太大,路过市民遭殃,雾盛喷雾降尘为您解决烦劳"/></a></dt>
 						<dd><span>◆建筑工地周边灰尘太大<br>◆路过市民遭殃<br>◆雾盛喷雾降尘为您解决烦劳</span></dd>
 					</dl>
 					<h5><span>雾盛喷雾除尘</span><b>没有喷雾除尘</b></h5>
@@ -118,12 +118,12 @@
 					<dl class="pk_d1">
 						<dd><span>◆景观造雾<br>◆广州小区景观造雾</span></dd>
 						<dt><a href="jingguanzaowu.shtml" target="_blank"><img src="images/3jingguanzaowu/jiangguanzaowu13.jpg"
-                                                                       alt=""/></a></dt>
+                                                                       alt="景观造雾,广州小区景观造雾"/></a></dt>
 					</dl>
 					<em></em>
 					<dl class="pk_d2">
 						<dt><a href="jingguanzaowu.shtml" target="_blank"><img src="images/3jingguanzaowu/jiangguan333.JPG"
-                                                                       alt=""/></a></dt>
+                                                                       alt="标准达不到"/></a></dt>
 						<dd><span>◆标准达不到</span></dd>
 					</dl>
 					<h5><span>雾盛景观造雾</span><b>没有景观造雾</b></h5>
@@ -131,12 +131,12 @@
 				<div class="sm">
 					<dl class="pk_d1">
 						<dd><span>◆喷雾加湿<br>◆超市蔬菜区选择喷雾加湿<br>◆蔬菜保持持久新鲜</span></dd>
-						<dt><a href="penwujiasi.shtml" target="_blank"><img src="images/4penwujiashi/penwujiashi3.jpg" alt=""/></a>
+						<dt><a href="penwujiasi.shtml" target="_blank"><img src="images/4penwujiashi/penwujiashi3.jpg" alt="喷雾加湿,超市蔬菜区选择喷雾加湿,蔬菜保持持久新鲜"/></a>
                 </dt>
 					</dl>
 					<em></em>
 					<dl class="pk_d2">
-						<dt><a href="penwujiasi.shtml" target="_blank"><img src="images/4penwujiashi/penwujia3333.jpg" alt=""/></a>
+						<dt><a href="penwujiasi.shtml" target="_blank"><img src="images/4penwujiashi/penwujia3333.jpg" alt="没有达到保湿,没有喷雾加湿"/></a>
                 </dt>
 						<dd><span>◆没有达到保湿</span></dd>
 					</dl>
@@ -245,9 +245,8 @@
 		<!--sucess成功案例-->
 		<div class="cast">
 			<div class="content">
-				<h3><span><a href="penwuchuchou.shtml" target="_blank" title="更多">+ 更多</a></span><i><a href="javascript:;"
-                                                                                               title="成功案例">成功案例<img
-                src="picture/cast_txt.jpg" alt="成功案例"/></a></i></h3>
+				<h3><span><a href="penwuchuchou.shtml" target="_blank" title="更多">+ 更多</a></span><i><a href="javascript:;" title="成功案例">成功案例
+					<img src="picture/cast_txt.jpg" alt="成功案例"/></a></i></h3>
 				<ul id="anls">
 					<li v-for="item in items">
 						<a :title="item.title" :href="'xiangqing.shtml?type=success&id='+item.id" target="_blank">
