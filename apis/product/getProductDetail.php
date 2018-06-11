@@ -1,17 +1,15 @@
 <?php
+    /*
+     * @desc  获取主机列表
+     */
+    require_once '../common/ws_product.php';
+    require_once "../common/ws_system.php";
 
-	require_once "../common/ws_product.php";
+    header('Content-type: application/json;charset=utf-8');
 
-	/*
-	 * @desc 根据制定ID获取产品详情
-	 * @author Chang, Jingli
-	 */
-	
-	header('Content-type: application/json;charset=utf-8');
+    $system = new ws_system();
+    $ws_product = new ws_product();
 
-	$product = new ws_product();
-	$system = new ws_system();
+    $res = $ws_product->getProductDetail();
 
-	$res = $product->getProductDetail();
-
-	$system->response( $res );
+    $system->response( $res );
