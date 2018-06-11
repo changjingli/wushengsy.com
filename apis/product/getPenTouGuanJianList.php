@@ -12,8 +12,4 @@
 
 	$PenTouGUanJIanList = $ws_product->getPenTouGuanJianList();
 
-    $res = array(
-        "PenTouGUanJIanList" => $PenTouGUanJIanList,
-    );
-
-    $system->response( $res );
+    $system->response( $PenTouGUanJIanList );

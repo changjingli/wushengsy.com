@@ -12,8 +12,4 @@
 
     $getZhuJiList = $ws_product->getZhuJiList();
 
-    $res = array(
-        "getZhuJiList" => $getZhuJiList,
-    );
-
-    $system->response( $res );
+    $system->response( $getZhuJiList );
