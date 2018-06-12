@@ -157,7 +157,6 @@ class ws_news
 
         $system->response( $arr );
 
-        $db->free( $result );
         $db->close( $link );
     }
 
@@ -190,8 +189,6 @@ class ws_news
 
         $system->response( $res );
 
-
-        $db->free( $result );
         $db->close( $link );
     }
 
@@ -226,7 +223,6 @@ class ws_news
 
         $system->response( $res );
 
-        $db->free( $result );
         $db->close( $link );
     }
 
@@ -256,7 +252,6 @@ class ws_news
 
         $system->response( $res );
 
-        $db->free( $result );
         $db->close( $link );
     }
 }
