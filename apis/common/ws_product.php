@@ -144,12 +144,12 @@ class ws_product
 
         while ( $row = mysqli_fetch_array( $result ) ) {
             $arr = array(
-                "id" => $row[ 'id' ], // 案例id
-                "title" => $row[ 'title' ], // 案例标题
-                "type" => $row[ 'type' ], // 案例标题
+                "id" => $row[ 'id' ], // 产品id
+                "title" => $row[ 'title' ], // 产品标题
+                "type" => $row[ 'type' ], // 产品标题
                 "author" => $row[ 'author' ], // 作者
                 "time" => $row[ 'time' ], // 发布时间
-                "content" => $row[ 'content' ], // 案例内容
+                "content" => $row[ 'content' ], // 产品内容
                 "view" => $row[ 'view' ], // 浏览次数
             );
         }
@@ -183,8 +183,70 @@ class ws_product
         $result = mysqli_query( $link, $query ) or die( "sql exec failed" );
 
         $res = array(
-            "code" => $result ? "1000" : "2000",
+            "code" => $result ? 1000 : 2000,
             "desc" => "删除" . ( $result ? "成功" : "失败" )
+        );
+
+        $system->response( $res );
+
+        $db->close( $link );
+    }
+
+    /**
+     * 编辑产品详情
+     */
+    public function editProductById () {
+        $id = @$_REQUEST[ 'id' ];
+        $system = new ws_system();
+
+        if ( !$id ) {
+            $system->idNotExist();
+            exit();
+        }
+
+        $db = new ws_db();
+        $link = $db->getLink();
+
+        $title = $_REQUEST[ 'title' ];
+        $type = $_REQUEST[ 'type' ];
+        $author = $_REQUEST[ 'author' ];
+        $content = $_REQUEST[ 'content' ];
+        $view = $_REQUEST[ 'view' ];
+
+        // 更新对应新闻
+        $result = mysqli_query( $link, "UPDATE wusheng.product SET title = '" . $title . "', author = '" . $author . "', view = '" . $view . "', content = '" . $content . "', type = '" .$type. "' where id=" . $id );
+
+        $res = array(
+            "code" => $result ? 1000 : 2000,
+            "desc" => "编辑" . ( $result ? "成功" : "失败" )
+        );
+
+        $system->response( $res );
+
+        $db->close( $link );
+    }
+
+    /**
+     * 新增产品
+     */
+    public function addProduct () {
+        $system = new ws_system();
+        $db = new ws_db();
+
+        $link = $db->getLink();
+
+        $type = $_REQUEST[ 'type' ];
+        $title = $_REQUEST[ 'title' ];
+        $author = $_REQUEST[ 'author' ];
+        $view = $_REQUEST[ 'view' ];
+        $content = $_REQUEST[ 'content' ];
+
+        // 插入对应新闻
+        $result = mysqli_query( $link, "INSERT into wusheng.product (type, title, author, view, content) values('$type', '$title', '$author', '$view', '$content')" );
+
+        $res = array(
+            "code" => $result ? 1000 : 2000,
+            "desc" => "新增" . ( $result ? "成功" : "失败" )
         );
 
         $system->response( $res );
