@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+		<link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../lib/layer/theme/default/layer.css" />
+		<title>雾盛主机列表页</title>
+	</head>
+
+	<body class="fixed-sidebar full-height-layout gray-bg">
+
+		<ul id="js-product" class="ws-list" v-cloak="">
+			<li class="row ws-list-item" v-for="(l, index) in list">
+				<div class="col-xs-1">
+					ID: {{ l.id }}
+				</div>
+				<div class="col-xs-9">
+					{{ l.title }}
+				</div>
+				<div class="col-xs-1">
+					<a class="btn btn-primary J_menuItem" :href="'case-edit.html?id=' + l.id">编辑</a>
+				</div>
+				<div class="col-xs-1">
+					<a class="btn btn-danger" href="javascript:" @click="deleteProduct(l.id, l.title, index)">删除</a>
+				</div>
+			</li>
+		</ul>
+
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../lib/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$.Post("apis/product/getZhuJiList.php", function(_data) {
+				var ZhuJiList = new Vue({
+					el: "#js-product",
+					data: {
+						list: _data
+					},
+					methods: {
+						/**
+						 * @description 根据指定的ID删除案例
+                         * @param {Number} id
+                         * @param {string} title
+                         * @param {number} idx
+						 */
+						deleteProduct: function(id, title, idx) {
+							var _this = this;
+							
+							layer.confirm('确定要删除《' + title + '》？删除后不可恢复！', {
+								btn: ['是', '否'] //按钮
+							}, function() {
+								$.Post("apis/product/deleteProductById.php", {
+									id: id
+								}, function(result) {
+									layer.msg( result.desc );
+									
+									// 成功的情况下删除页面数据
+									if ( result.code == 1000 ) {
+										_this.list.splice( idx, 1 );
+									}
+								});
+							});
+						}
+					}
+				});
+			});
+		</script>
+
+	</body>
+
+</html>

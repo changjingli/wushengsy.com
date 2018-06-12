@@ -7,12 +7,12 @@
     <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/public.css"/>
     <link rel="stylesheet" type="text/css" href="../lib/layer/theme/default/layer.css"/>
-    <title>喷雾降温列表页</title>
+    <title>喷头管件列表页</title>
 </head>
 
 <body class="fixed-sidebar full-height-layout gray-bg">
 
-<ul id="js-news" class="ws-list" v-cloak="">
+<ul id="js-product" class="ws-list" v-cloak="">
     <li class="row ws-list-item" v-for="(l, index) in list">
         <div class="col-xs-1">
             ID: {{ l.id }}
@@ -24,19 +24,19 @@
             <a class="btn btn-primary J_menuItem" :href="'case-edit.html?id=' + l.id">编辑</a>
         </div>
         <div class="col-xs-1">
-            <a class="btn btn-danger" href="javascript:;" @click="deleteCases(l.id, l.title, index)">删除</a>
+            <a class="btn btn-danger" href="javascript:" @click="deleteProduct(l.id, l.title, index)">删除</a>
         </div>
     </li>
 </ul>
 
-<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js" charset="utf-8"></script>
 <script src="js/common.js" type="text/javascript" charset="utf-8"></script>
 <script src="../lib/layer/layer.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-    $.Post( "apis/case/getPenWuJiangWenList.php", function ( _data ) {
-        var newsList = new Vue( {
-            el: "#js-news",
+    $.Post( "apis/product/getPenTouGuanJianList.php", function ( _data ) {
+        var PenTouGuanJianList = new Vue( {
+            el: "#js-product",
             data: {
                 list: _data
             },
@@ -44,15 +44,17 @@
                 /**
                  * @description 根据指定的ID删除案例
                  * @param {Number} id
+                 * @param {string} title
+                 * @param {number} idx
                  */
-                deleteCases: function ( id, title, idx ) {
+                deleteProduct: function ( id, title, idx ) {
                     var _this = this;
 
                     layer.confirm( '确定要删除《' + title + '》？删除后不可恢复！', {
                         btn: [ '是', '否' ] //按钮
                     }, function () {
-                        $.Post( "apis/case/deleteCaseById.php", {
-                            id: id,
+                        $.Post( "apis/product/deleteProductById.php", {
+                            id: id
                         }, function ( result ) {
                             layer.msg( result.desc );
 
