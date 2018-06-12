@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="../lib/layer/theme/default/layer.css"/>
+    <title>新增新闻</title>
+</head>
+
+<body class="fixed-sidebar full-height-layout gray-bg">
+
+<form method="post" class="container-fluid" id="js-news-add">
+    <fieldset>
+        <legend>新增新闻</legend>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="title">新闻类型：</label>
+                    <select id="type" v-model="type" class="form-control">
+                        <option value="Company">雾盛动态</option>
+                        <option value="Industry">行业新闻</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="author">作者：</label>
+                    <input type="text" class="form-control" id="author" maxlength="10" v-model="author" required/>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="title">新闻标题：</label>
+                    <input type="text" class="form-control" id="title" maxlength="50" v-model="title"
+                           placeholder="标题请控制在50字以内" required/>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="view">浏览次数：</label>
+                    <input type="number" class="form-control" id="view" v-model="view"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="title">新闻内容：</label>
+            <!-- 加载编辑器的容器 -->
+            <script id="container" name="content" type="text/plain"></script>
+        </div>
+
+        <hr/>
+
+        <div class="form-group text-center">
+            <button type="button" class="btn btn-success mlr15" @click="submitNews">提交</button>
+            <button type="reset" class="btn btn-danger mlr15">重置</button>
+        </div>
+    </fieldset>
+</form>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js" charset="utf-8"></script>
+<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="../lib/layer/layer.js"></script>
+<script src="/ueditor/utf8-php/ueditor.config.js" type="text/javascript" charset="utf-8"></script>
+<script src="/ueditor/utf8-php/ueditor.all.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    var ue = UE.getEditor( 'container' );
+    var detail = new Vue( {
+        el: "#js-news-add",
+        data: {
+            title: '',
+            author: '管理员',
+            type: 'Company',
+            view: 0
+        },
+        methods: {
+            submitNews: function () {
+                var $form = document.getElementById("js-news-add");
+
+                if ( !$form.checkValidity() ) {
+                    return false;
+                }
+
+                var data = this.data;
+                data.content = ue.getContent();
+
+                $.Post("apis/news/addNews.php", data, function (d) {
+                    layer.msg(d.desc);
+                });
+            }
+        }
+    } );
+</script>
+
+</body>
+
+</html>

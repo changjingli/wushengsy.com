@@ -1,34 +1,14 @@
 <?php
-	require_once "../conn.php";
-	
-	header('Content-type: application/json;charset=utf-8');
-	
-	$id = @$_REQUEST[ 'id' ];
-	$res = [];
-	
-	if (!$id) {
-		$res = array(
-			"code" => 2000,
-			"desc" => "请传入id"
-		);
-		die( json_encode( $res ) );
-	}
-	// 删除对应新闻
-	$result = mysqli_query( $link, "UPDATE news SET isDel=1 where id=".$id );
-	
-	if ( $result ) {
-		$res = array(
-			"code" => 1000,
-			"desc" => "删除成功"
-		);
-	} else {
-		$res = array(
-			"code" => 2001,
-			"desc" => "删除失败"
-		);
-	}
-	
-	echo json_encode( $res, JSON_UNESCAPED_UNICODE );
-	// 关闭数据库连接
-	mysqli_close($link);
-?>
+/**
+ * Created by PhpStorm.
+ * User: jingl
+ * Date: 2018/6/12
+ * Time: 12:55
+ * Desc: 删除指定新闻
+ */
+require_once '../common/ws_news.php';
+
+header('Content-type: application/json;charset=utf-8');
+
+$ws_news = new ws_news();
+$ws_news->deleteNewsById();

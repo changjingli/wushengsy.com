@@ -1,30 +1,14 @@
 <?php
-	require_once "../conn.php";
-	
-	header('Content-type: application/json;charset=utf-8');
-	
-	// sql 查询
-	$query = "select * from news where type='Industry' and isDel=0";
-	mysqli_query($link,"set character set 'utf8'");//读库
-	// 执行sql查询
-	$result = mysqli_query($link, $query) or die("sql exec failed");
-	
-	$arr = [];
-	
-	while ( $row = mysqli_fetch_array($result) ) {
-		$arr[] = array(
-			"id"    => $row['id'],
-			"title" => $row['title'],
-			"time"  => $row['time']
-		);
-	}
-	
-	// 输出查询结果
-	echo json_encode($arr);
-		
-	// 释放查询资源
-	mysqli_free_result($result);
-	
-	// 关闭数据库连接
-	mysqli_close($link);
-?>
+/**
+ * Created by PhpStorm.
+ * User: jingl
+ * Date: 2018/6/12
+ * Time: 12:57
+ * Desc: 获取行业新闻列表
+ */
+require_once '../common/ws_news.php';
+
+header('Content-type: application/json;charset=utf-8');
+
+$ws_news = new ws_news();
+$ws_news->getIndustryNewsList();

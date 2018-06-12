@@ -10,6 +10,37 @@ require_once "../common/ws_db.php";
 require_once "../common/ws_system.php";
 
 class ws_product {
+
+    /**
+     * 获取所有产品列表
+     * @return array
+     */
+    public function getAllProductList () {
+        $db = new ws_db();
+        $link = $db->getLink();
+
+        // sql 查询
+        $query = "select * from wusheng.product where isDel=0 order by id desc";
+        mysqli_query($link,"set character set 'utf8'");//读库
+        // 执行sql查询
+        $result = mysqli_query($link, $query) or die("sql exec failed");
+
+        $arr = [];
+
+        while ( $row = mysqli_fetch_array($result) ) {
+            $arr[] = array(
+                "id"      => $row['id'],
+                "title"   => $row['title'],
+                "thumb"   => $row['thumb'],
+                "type"    => $row['type']
+            );
+        }
+
+        $db->free($result);
+        $db->close($link);
+        return $arr;
+    }
+
     /**
      * @desc 获取喷头和管件列表
      * @return array

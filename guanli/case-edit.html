@@ -65,7 +65,7 @@
 				<hr />
 
 				<div class="form-group text-center">
-					<button type="button" class="btn btn-success mlr15" @click="submitNews">提交</button>
+					<button type="button" class="btn btn-success mlr15" @click="submitCases">提交</button>
 					<button type="reset" class="btn btn-danger mlr15">重置</button>
 				</div>
 			</fieldset>
@@ -94,7 +94,7 @@
 						thumb: _data.thumb,
 					},
 					methods: {
-						submitNews: function () {
+						submitCases: function () {
 							var data = this.$data;
 							data.content = ue.getContent();
 							
