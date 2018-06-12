@@ -18,7 +18,6 @@ class ws_news
 
     /**
      * @desc 获取所有新闻列表
-     * @return array
      */
     public function getAllNewsList ()
     {
@@ -50,7 +49,6 @@ class ws_news
 
     /**
      * @desc 获取雾盛动态列表
-     * @return array
      */
     public function getCompanyNewsList ()
     {
@@ -82,7 +80,6 @@ class ws_news
 
     /**
      * @desc 获取行业新闻列表
-     * @return array
      */
     public function getIndustryNewsList ()
     {
@@ -243,7 +240,7 @@ class ws_news
         $content = $_REQUEST[ 'content' ];
 
         // 插入对应新闻
-        $result = mysqli_query( $link, "INSERT into wusheng.case (type, title, author, view, content) values('$type', '$title', '$author', '$view', '$content')" );
+        $result = mysqli_query( $link, "INSERT into wusheng.news (type, title, author, view, content) values('$type', '$title', '$author', '$view', '$content')" );
 
         $res = array(
             "code" => $result ? 1000 : 2000,
