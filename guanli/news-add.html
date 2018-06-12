@@ -89,7 +89,7 @@
                     return false;
                 }
 
-                var data = this.data;
+                var data = this.$data;
                 data.content = ue.getContent();
 
                 $.Post("apis/news/addNews.php", data, function (d) {
