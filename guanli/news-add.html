@@ -71,20 +71,21 @@
 <script src="/ueditor/utf8-php/ueditor.config.js" type="text/javascript" charset="utf-8"></script>
 <script src="/ueditor/utf8-php/ueditor.all.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-    var ue = UE.getEditor( 'container' );
-    var detail = new Vue( {
+    var ue = UE.getEditor('container');
+    var detail = new Vue({
         el: "#js-news-add",
         data: {
             title: '',
             author: '管理员',
             type: 'Company',
-            view: 0
+            view: 0,
+            content: '',
         },
         methods: {
             submitNews: function () {
                 var $form = document.getElementById("js-news-add");
 
-                if ( !$form.checkValidity() ) {
+                if (!$form.checkValidity()) {
                     return false;
                 }
 
@@ -96,7 +97,7 @@
                 });
             }
         }
-    } );
+    });
 </script>
 
 </body>
