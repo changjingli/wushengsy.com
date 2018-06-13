@@ -7,24 +7,21 @@
     <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/public.css"/>
     <link rel="stylesheet" type="text/css" href="../lib/layer/theme/default/layer.css"/>
-    <title>编辑案例展示</title>
+    <title>编辑产品展示</title>
 </head>
 
 <body class="fixed-sidebar full-height-layout gray-bg">
 
 <form method="post" class="container-fluid">
     <fieldset id="js-news-edit">
-        <legend>编辑案例展示</legend>
+        <legend>编辑产品展示</legend>
         <div class="row">
             <div class="col-xs-6">
                 <div class="form-group">
-                    <label for="title">案例类型：</label>
+                    <label for="title">产品类型：</label>
                     <select id="type" v-model="type" class="form-control">
-                        <option value="penwujiangwen">喷雾降温</option>
-                        <option value="penwuchuchen">喷雾除尘</option>
-                        <option value="jingguanzaowu">景观造雾</option>
-                        <option value="penwujiashi">喷雾加湿</option>
-                        <option value="penwuchuchou">喷雾除臭</option>
+                        <option value="pentouguanjian">喷头和管件</option>
+                        <option value="zhuji">雾盛主机</option>
                     </select>
                 </div>
             </div>
@@ -39,7 +36,7 @@
         <div class="row">
             <div class="col-xs-6">
                 <div class="form-group">
-                    <label for="title">案例标题：</label>
+                    <label for="title">产品名称：</label>
                     <input type="text" class="form-control" id="title" maxlength="50" v-model="title"
                            placeholder="标题请控制在50字以内"/>
                 </div>
@@ -80,7 +77,7 @@
 <script src="/ueditor/utf8-php/ueditor.config.js" type="text/javascript" charset="utf-8"></script>
 <script src="/ueditor/utf8-php/ueditor.all.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-    $.Post( "apis/case/getCaseDetail.php", {
+    $.Post( "apis/product/getProductDetail.php", {
         id: getPageVar( "id" )
     }, function ( _data ) {
         var ue = UE.getEditor( 'container' );
@@ -100,7 +97,7 @@
                     var data = this.$data;
                     data.content = ue.getContent();
 
-                    $.Post( "apis/case/editCaseById.php", data, function ( d ) {
+                    $.Post( "apis/product/editProductById.php", data, function ( d ) {
                         layer.msg( d.desc, function () {
                             window.location.reload();
                         } );

@@ -78,7 +78,7 @@ class ws_product
     }
 
     /**
-     * @desc 获取主机列表
+     * @desc 获取雾盛主机列表
      */
     public function getZhuJiList ()
     {

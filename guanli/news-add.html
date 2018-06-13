@@ -93,7 +93,9 @@
                 data.content = ue.getContent();
 
                 $.Post( "apis/news/addNews.php", data, function ( d ) {
-                    layer.msg( d.desc );
+                    layer.msg( d.desc, function () {
+                        window.location.reload();
+                    } );
                 } );
             }
         }

@@ -70,7 +70,9 @@
                         "view": parseInt( $( "#view" ).val() ),
                         "content": ue.getContent()
                     }, function ( d ) {
-                        layer.msg( d.desc );
+                        layer.msg( d.desc, function () {
+                            window.location.reload();
+                        } );
                     } );
                 }
             }
