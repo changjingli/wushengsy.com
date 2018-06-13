@@ -195,7 +195,8 @@ class ws_product
     /**
      * 编辑产品详情
      */
-    public function editProductById () {
+    public function editProductById ()
+    {
         $id = @$_REQUEST[ 'id' ];
         $system = new ws_system();
 
@@ -213,8 +214,8 @@ class ws_product
         $content = $_REQUEST[ 'content' ];
         $view = $_REQUEST[ 'view' ];
 
-        // 更新对应新闻
-        $result = mysqli_query( $link, "UPDATE wusheng.product SET title = '" . $title . "', author = '" . $author . "', view = '" . $view . "', content = '" . $content . "', type = '" .$type. "' where id=" . $id );
+        // 更新对应产品
+        $result = mysqli_query( $link, "UPDATE wusheng.product SET title = '" . $title . "', author = '" . $author . "', view = '" . $view . "', content = '" . $content . "', type = '" . $type . "' where id=" . $id );
 
         $res = array(
             "code" => $result ? 1000 : 2000,
@@ -229,7 +230,8 @@ class ws_product
     /**
      * 新增产品
      */
-    public function addProduct () {
+    public function addProduct ()
+    {
         $system = new ws_system();
         $db = new ws_db();
 
