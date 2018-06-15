@@ -1,35 +1,15 @@
 <?php
-	/*
-	 * @desc  获取喷雾除尘列表
-	 */
-	require_once "../conn.php";
-	
-	header('Content-type: application/json;charset=utf-8');
-	
-	// sql 查询
-	$type = "penwuchuchen";
-	$query = "select * from wusheng.case where isDel=0 and type='$type' order by id desc";
-	mysqli_query($link,"set character set 'utf8'");//读库
-	// 执行sql查询
-	$result = mysqli_query($link, $query) or die("sql exec failed");
-	
-	$arr = [];
-	
-	while ( $row = mysqli_fetch_array($result) ) {
-		$arr[] = array(
-			"id"      => $row['id'],
-			"title"   => $row['title'],
-			"thumb"   => $row['thumb'],
-			"type"    => $row['type'],
-		);
-	}
-	
-	// 输出查询结果
-	echo json_encode($arr);
-		
-	// 释放查询资源
-	mysqli_free_result($result);
-	
-	// 关闭数据库连接
-	mysqli_close($link);
-?>
+/**
+ * Created by PhpStorm.
+ * User: jingl
+ * Date: 2018/6/15
+ * Time: 18:04
+ * Desc: 获取喷雾除尘列表
+ */
+require_once '../common/ws_case.php';
+
+header( 'Content-type: application/json;charset=utf-8' );
+
+$ws_case = new ws_case();
+$type = "penwuchuchen";
+$ws_case->getCaseList( $type );
