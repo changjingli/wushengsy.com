@@ -29,7 +29,7 @@ class ws_case
         $link = $db->getLink();
 
         // sql 查询
-        $query = "select * from " . self::TABLE_NAME . " where isDel=0 order by id desc";
+        $query = "select * from " . self::TABLE_NAME . " where type='$type' isDel=0 order by id desc";
         mysqli_query( $link, "set character set 'utf8'" );//读库
         // 执行sql查询
         $result = mysqli_query( $link, $query ) or die( "sql exec failed" );
