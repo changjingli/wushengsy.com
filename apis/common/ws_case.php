@@ -16,7 +16,10 @@ class ws_case
 
     /**
      * 获取指定类型的案例
+     *
      * @param $type {string} 指定类型 - penwujiangwen, penwuchuchou, penwuchuchen, penwujiashi, jingguanzaowu
+     *
+     * @return array
      */
     public function getCaseList ( $type )
     {
@@ -38,29 +41,29 @@ class ws_case
 
         while ( $row = mysqli_fetch_array( $result ) ) {
             $arr[] = array(
-                "id"    => $row['id'   ],
-                "title" => $row['title'],
-                "thumb" => $row['thumb'],
-                "type"  => $row['type' ],
+                "id" => $row[ 'id' ],
+                "title" => $row[ 'title' ],
+                "thumb" => $row[ 'thumb' ],
+                "type" => $row[ 'type' ],
             );
         }
 
-        $system->response( $arr );
-
         $db->free( $result );
         $db->close( $link );
+
+        return $arr;
     }
 
     /**
      * 获取案例详情
      */
-    public function getCaseDetail () {
+    public function getCaseDetail ()
+    {
         $id = @$_REQUEST[ 'id' ];
         $system = new ws_system();
 
         if ( !$id ) {
-            $system->idNotExist();
-            exit();
+            $system->error( 2001, '请传入案例的id' );
         }
 
         $db = new ws_db();
@@ -84,19 +87,55 @@ class ws_case
 
         while ( $row = mysqli_fetch_array( $result ) ) {
             $arr = array(
-                "id"      => $row['id'     ], // 案例id
-                "title"   => $row['title'  ], // 案例标题
-                "type"    => $row['type'   ], // 案例标题
-                "author"  => $row['author' ], // 作者
-                "time"    => $row['time'   ], // 发布时间
-                "content" => $row['content'], // 案例内容
-                "view"    => $row['view'   ], // 浏览次数
+                "id" => $row[ 'id' ], // 案例id
+                "title" => $row[ 'title' ], // 案例标题
+                "type" => $row[ 'type' ], // 案例标题
+                "author" => $row[ 'author' ], // 作者
+                "time" => $row[ 'time' ], // 发布时间
+                "content" => $row[ 'content' ], // 案例内容
+                "view" => $row[ 'view' ], // 浏览次数
             );
         }
 
-        $system->response( $arr );
-
         $db->free( $result );
         $db->close( $link );
+
+        return $arr;
+    }
+
+    /**
+     * 编辑案例
+     * @return array
+     */
+    public function editCaseById ()
+    {
+        $id = @$_REQUEST[ 'id' ];
+        $system = new ws_system();
+
+        if ( !$id ) {
+            $system->error( 2001, '请传入要编辑案例的id' );
+        }
+
+        $db = new ws_db();
+        $link = $db->getLink();
+
+        $title = $_REQUEST[ 'title' ];
+        $type = $_REQUEST[ 'type' ];
+        $author = $_REQUEST[ 'author' ];
+        $content = $_REQUEST[ 'content' ];
+        $view = $_REQUEST[ 'view' ];
+        $thumb = $_REQUEST[ 'thumb' ];
+
+        // 更新对应案例
+        $result = mysqli_query( $link, "UPDATE " . self::TABLE_NAME . " SET title = '" . $title . "', type = '" . $type . "', author = '" . $author . "', view = '" . $view . "', content = '" . $content . "', thumb = '" . $thumb . "' where id=" . $id );
+
+        $res = array(
+            "code" => $result ? 1000 : 2000,
+            "desc" => "编辑" . ( $result ? "成功" : "失败" )
+        );
+
+        $db->close( $link );
+
+        return $res;
     }
 }
