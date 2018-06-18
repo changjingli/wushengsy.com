@@ -138,4 +138,32 @@ class ws_case
 
         return $res;
     }
+
+    /**
+     * 删除对应id的案例
+     * @return array
+     */
+    public function deleteCaseById () {
+        $id = @$_REQUEST[ 'id' ];
+        $system = new ws_system();
+
+        if ( !$id ) {
+            $system->error( 2001, '请传入要编辑案例的id' );
+        }
+
+        $db = new ws_db();
+        $link = $db->getLink();
+
+        // 删除对应案例
+        $result = mysqli_query( $link, "UPDATE " . self::TABLE_NAME . " SET isDel=1 where id=" . $id ) or die( "sql exec failed" );
+
+        $res = array(
+            "code" => $result ? 1000 : 2000,
+            "desc" => "删除" . ( $result ? "成功" : "失败" )
+        );
+
+        $db->close( $link );
+
+        return $res;
+    }
 }
