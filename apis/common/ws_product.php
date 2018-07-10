@@ -4,6 +4,7 @@
  * User: jingl
  * Date: 2018/5/13
  * Time: 20:18
+ * Desc: 雾盛产品逻辑
  */
 
 require_once "../common/ws_db.php";

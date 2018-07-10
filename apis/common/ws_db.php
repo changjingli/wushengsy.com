@@ -4,6 +4,7 @@
  * User: jingl
  * Date: 2018/5/13
  * Time: 16:01
+ * Desc: 雾盛数据库逻辑
  */
 
 class ws_db {
